@@ -14,18 +14,19 @@ function NavigationBar() {
                 <Link to='/blog'>Blog</Link>
             </div>
             <div className='nav-link'>
-                <Link to='/contact'>Contact Me</Link>
+                <Link to='/contact'>Contact Us</Link>
             </div>
-      </div>
-      <div className='login'>
-      <div className='nav-link-right'>
-                <Link to='/register'>Register</Link>
-            </div>
-            <div className='nav-link-right'>
+          </div>
+            <div className='login'>
+                <div className='nav-link-right'>
+                    <Link to='/register'>Register</Link>
+                </div>
+                 <div className='nav-link-right'>
                 <Link to='/login'>Log in</Link>
+                </div>
             </div>
-      </div>
-   </div>
+      </div>              
+    //   end of container
   )
 }
 

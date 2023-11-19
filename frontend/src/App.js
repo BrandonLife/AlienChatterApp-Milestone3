@@ -6,6 +6,8 @@ import Contact from './Pages/Contact';
 import Blog from './Pages/Blog';
 import Footer from './Components/Footer';
 import { Route, Routes } from 'react-router-dom';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
 
 
 function App() {
@@ -16,7 +18,9 @@ function App() {
         <Route path='/' element= {<Home/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element= {<Contact/>} />
-        <Route path='/blog' element={<Blog/> } />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register/>} />
       </Routes>
       <Footer/>
     </div>
