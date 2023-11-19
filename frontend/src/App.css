@@ -34,7 +34,7 @@ color: green;
   gap: 1em;
   margin: .5em;
   text-align: right;
-  padding-left: 68%;
+  padding-left: 60%;
   margin-top: 1.5em;
 }
 
@@ -139,6 +139,13 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* Contact page- this is from https://snippets.wrappixel.com/simple-contact-us-form/ */ 
  .container{
   background-color: lightgray;
+ }
+
+ .contact-box{
+  padding-right: 15%;
+ }
+ .font-weight-light{
+  text-align: center;
  }
   .contact3 {
     font-family: "Montserrat", sans-serif;
