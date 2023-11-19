@@ -3,6 +3,7 @@ const express = require("express");
 const methodOverride = require('method-override')
 const mongoose = require("mongoose")
 require("dotenv").config();
+const userController = require('./controllers/User')
 const app = express()
 
 //Middleware
@@ -11,7 +12,7 @@ app.use(express.static("public"));
 app.use(methodOverride('_method'))
 
 //routes
-
+app.use('/users', userController)
 
 
 //Mongo DB connection

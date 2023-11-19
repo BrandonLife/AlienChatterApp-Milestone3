@@ -6,8 +6,8 @@ import Contact from './Pages/Contact';
 import Blog from './Pages/Blog';
 import Footer from './Components/Footer';
 import { Route, Routes } from 'react-router-dom';
-import Login from './Pages/Login';
-import Register from './Pages/Register';
+import Login from './User/Login';
+import Register from './User/Register';
 
 
 function App() {
