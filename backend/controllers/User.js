@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const User = require('../models/User')
-
+const jwt = require('jsonwebtoken')
+const bcrypt = require('bcrypt')
 
 //Get register page
 router.get('/registration', (req, res) => {
@@ -11,18 +12,69 @@ router.get('/registration', (req, res) => {
 router.get('/userlogin', (req, res) => {
     res.render('Login')
 })
-//Create new user
-router.post('/', async (req, res) => {
-    await User.create(req.body)
-    res.status(303).redirect('/users')
-})
 
-//Get a specific user
+// Get a specific user 
 router.get('/:id', async (req, res) => {
     const { id } = req.params
     const user = await User.findById(id)
     res.render('Home', {user})
 })
+
+router.get('/', (req, res) => {
+    res.render('Home')
+})
+
+//Create new user, info from https://blog.bitsrc.io/how-to-use-jwt-for-authentication-and-create-a-login-system-in-node-js-and-mongodb-83bb852e777a
+router.post('/register', async (req, res) => {
+    const { username, bio, image, password } = req.body
+    const hashedPassword = await bcrypt.hash(password, 10)
+    await User.create({
+        username: username,
+        bio: bio,
+        image: image,
+        password: hashedPassword
+    })
+    res.status(303).redirect('/')
+})
+
+//Login post route - https://blog.bitsrc.io/how-to-use-jwt-for-authentication-and-create-a-login-system-in-node-js-and-mongodb-83bb852e777a
+router.post('/login', async (req, res) => {
+    const { username, password } = req.body
+    // Find user by username
+    const user = await User.findOne({ username })
+    
+    if (!user) {
+        // If the user doesn't exist, return an error
+        return res.status(401).send('Invalid email or password');
+      }
+    
+      // Check if password is correct
+      const isPasswordCorrect = await bcrypt.compare(password, user.password);
+    
+      if (!isPasswordCorrect) {
+        // If the password is incorrect, return an error
+        return res.status(401).send('Invalid email or password');
+    }
+    
+     // If the email and password are correct, create a JWT token
+  // Secrete Key saved in .env file
+    const mysecretkey = process.env.SECRET_CODE;
+
+    // Payload to generate JWT
+  const payload = {
+    username: user.username,
+    password: user.password,
+  };
+  // Create a jsonwebtoken that expires in 5 days
+    const token = jwt.sign(payload, mysecretkey, { expiresIn: '5d' });
+    
+     // Send the token back to the client
+  res.status(200).json({
+    msg: "User is logged in",
+    token: token
+  }).redirect('/')
+})
+
 
 //Edit User
 router.put('/:id', async (req, res) => {

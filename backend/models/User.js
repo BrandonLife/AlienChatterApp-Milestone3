@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-
-
+const bcrypt = require('bcrypt')
+// used this site to help me with jwt https://www.loginradius.com/blog/engineering/nodejs-and-mongodb-application-authentication-by-jwt/
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -22,5 +22,6 @@ const userSchema = new mongoose.Schema({
 
 
 })
+
 
 module.exports = mongoose.model("User", userSchema)

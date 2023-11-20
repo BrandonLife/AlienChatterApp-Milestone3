@@ -1,12 +1,14 @@
 //Dependencies
 const express = require("express");
 const methodOverride = require('method-override')
+const bodyParser = require('body-parser')
 const mongoose = require("mongoose")
 require("dotenv").config();
 const userController = require('./controllers/User')
 const app = express()
 
 //Middleware
+app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(methodOverride('_method'))
