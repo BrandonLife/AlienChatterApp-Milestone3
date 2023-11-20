@@ -1,34 +1,11 @@
-import React, { useState } from 'react'
-import './Register.css'
+const React = require("react");
+const Default = require('./layouts/default')
+
 function Register() {
-  const [username, SetUsername] = useState('')
-  const [password, SetPassword] = useState('')
-  const [bio, SetBio] = useState('')
-  const [image, SetImage] = useState('')
-  console.log(username, password, bio, image)
-
-  const body = {username: username, password: password, bio:bio, image: image}
-
-  const submitHandler = (e) => {
-    e.preventDefault()
-    fetch('http://localhost:8080/users/register', {
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-        'Content-Type':'application/json',
-        " Access-Control-Allow-Origin":"*",
-      },
-      body: JSON.stringify(body)
-    })
-      .then(res => res.json)
-    .then(data=> data)
-    
-
-}
-
-  return (
+return (
+<Default>
     <div className='register-container'>
-      <form onSubmit={submitHandler}>
+      <form action='/users/register' method='POST'>
         <h1>Register</h1>
         <div className='username'>
         <label htmlFor='username'>Username</label>
@@ -50,8 +27,9 @@ function Register() {
         <input type='submit' value={"Create Account"}></input>
         </div>
         </form>
-    </div>
+            </div>
+</Default>
   )
 }
 
-export default Register
+module.exports = Register;

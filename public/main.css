@@ -1,0 +1,343 @@
+.default-container{
+  display: flex;
+}
+
+/* Nav component */
+.nav-container{
+    display: flex;
+    justify-content: left;
+    background-color: gray;
+   }
+  
+  .nav-link-container{
+  display: flex;
+  gap: 1em;
+  margin: 1.5em;
+  }
+  
+  .nav-link a{
+  background-color: lightgray;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-size: 30px;
+  text-decoration: none;
+  padding: 2px;
+  color: green;
+  }
+  
+  .nav-link a:hover{
+    background-color: black;
+    color: green;
+  }
+  
+  .login{
+    display: flex;
+    gap: 1em;
+    margin: .5em;
+    text-align: right;
+    padding-left: 60%;
+    margin-top: 1.5em;
+  }
+  
+  .nav-link-right{
+    font-size: 1.65em;
+  }
+  .nav-link-right a{
+    color: black;
+    text-decoration: none;
+  }
+  .nav-link-right a{
+    color: black;
+    text-decoration: none;
+  }
+  .nav-link-right a:hover{
+    color: green;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: .25em;
+    margin: .75em;
+    font-size: 1.05em;
+  }
+  
+  /* Footer Component */
+  .footer-container{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: lightgray;
+    width: 100%;
+    }
+    .footer-container a{
+      text-decoration: none;
+      color: green;
+    }
+  
+  .social-links-codewars{
+  width: 33.3%;
+  }
+  
+  .social-links-github{
+    width: 33.3%;
+  }
+  
+  .social-links-linkedin{
+    width: 33.3%;
+  }
+  
+  .social-links-github img{
+  width: 13%;
+  margin: 1.25em;
+  }
+  .social-links-linkedin img{
+    width: 12%;
+    margin: 1.25em;
+  }
+  .social-links-codewars img{
+    width: 13%;
+    margin: 1.25em;
+  }
+  
+  .social-links-codewars span{
+    font-size: 2em;
+  }
+  .social-links-github span{
+    font-size: 2em;
+  }
+  .social-links-linkedin span{
+    font-size: 2em;
+    text-decoration: none;
+  }
+  .social-links-linkedin:hover{
+  background-color: chartreuse;
+  }
+  .social-links-github:hover{
+    background-color: chartreuse;
+  }
+  .social-links-codewars:hover{
+    background-color: chartreuse;
+  }
+
+  /* Home */
+    
+  .float-left{
+    text-align: center;
+    float: left;
+    width: 45%;
+    border: 2px solid black;
+    border-radius: 2em;
+    margin-top: 1.5em;
+    background-color: rgb(170, 167, 167);
+    box-shadow: 2px 5px gray;
+   
+}
+.float-right{
+    text-align: center;
+   float: right;
+   width: 54%;
+   border: 2px solid black;
+   border-radius: 2em;
+   margin-top: 1.5em;
+   background-color: rgb(163, 159, 159);
+   box-shadow: 2px 5px gray;
+   
+}
+
+.float-left img{
+    width: 70%;
+    margin-right: 0%;
+    border: 2px solid black;
+    border-radius: 3em;
+}
+
+.float-right img{
+    width: 95%;
+    padding-top: 2em;
+    padding-bottom: 5em;
+  
+}
+
+/* Contact page- this is from https://snippets.wrappixel.com/simple-contact-us-form/ */ 
+.container{
+  background-color: lightgray;
+ }
+
+ .contact-box{
+  padding-right: 15%;
+ }
+ .font-weight-light{
+  text-align: center;
+ }
+  .contact3 {
+    font-family: "Montserrat", sans-serif;
+    color: #8d97ad;
+    font-weight: 300;
+  }
+  
+  .contact3 h1,
+  .contact3 h2,
+  .contact3 h3,
+  .contact3 h4,
+  .contact3 h5,
+  .contact3 h6 {
+    color: #3e4555;
+  }
+  
+  .contact3 .font-weight-medium {
+    font-weight: 500;
+  }
+  
+  .contact3 .card-shadow {
+    -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+  }
+  
+  .contact3 .btn-danger-gradiant {
+    background: #ff4d7e;
+    background: -webkit-linear-gradient(legacy-direction(to right), #ff4d7e 0%, #ff6a5b 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#ff4d7e), to(#ff6a5b));
+    background: -webkit-linear-gradient(left, #ff4d7e 0%, #ff6a5b 100%);
+    background: -o-linear-gradient(left, #ff4d7e 0%, #ff6a5b 100%);
+    background: linear-gradient(to right, #ff4d7e 0%, #ff6a5b 100%);
+  }
+  
+  .contact3 .btn-danger-gradiant:hover {
+    background: #ff6a5b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #ff6a5b 0%, #ff4d7e 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#ff6a5b), to(#ff4d7e));
+    background: -webkit-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+    background: -o-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+    background: linear-gradient(to right, #ff6a5b 0%, #ff4d7e 100%);
+  }
+
+  /* About page */
+.about-container{
+  text-align: center;
+  background-color: whitesmoke;
+   width: 100%;
+   height: 100%;
+   }
+ 
+ .about-header h1{
+ font-size: 4em;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ 
+ .about-paragraph{
+   font-size: 2em;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color: green;
+   margin: auto;
+   }
+   /* Register */
+
+   .register-container{
+    text-align: center;
+    display: flex;
+    margin-top: 8%;
+
+    justify-content: center;
+ }
+ 
+ .register-container form{
+     display: flex;
+     flex-direction: column;
+     gap: 2em;
+     background-color: lightgray;
+     width: 27%;
+     padding: 2em;
+     border: 2px solid black;
+     box-shadow: 2px 10px gray;
+     border-radius: 1.5em;
+     position: absolute;
+     right: 40%;
+ }
+ 
+ .username label{
+    padding-right: 2em; 
+    font-weight: bold;
+ }
+ .password label{
+     padding-right: 2em; 
+     font-weight: bold;
+  }
+  .bio label{
+     padding-right: 3.5em; 
+     font-weight: bold;
+  }
+  .image label{
+     padding-right: 3.5em; 
+     font-weight: bold;
+  }
+ 
+  .username input{
+    border: 2.5px solid black;
+  }
+  .password input{
+     border: 2.5px solid black;
+   }
+   .bio textarea{
+     border: 2.5px solid black;
+   }
+   .image input{
+     border: 2.5px solid black;
+   }
+ 
+   .submit input[value="Create Account"]{
+     background-color: greenyellow;
+     color: black;
+     font-weight: bold;
+     border: 2px solid black;
+     border-radius: 2em;
+   }
+ 
+   .submit input[value="Create Account"]:hover{
+     font-size: larger;
+   }
+/* Login */
+   .login-container{
+    text-align: center;
+    display: flex;
+    margin-top: 10%;
+    justify-content: center;
+ }
+ 
+ .login-container form{
+     display: flex;
+     flex-direction: column;
+     gap: 2em;
+     background-color: lightgray;
+     width: 15%;
+     padding: 2em;
+     border: 2px solid black;
+     box-shadow: 2px 10px gray;
+     border-radius: 1.5em;
+     position: absolute;
+     right: 40%;
+ }
+ 
+ .username label{
+    padding-right: 2em; 
+    font-weight: bold;
+ }
+ .password label{
+     padding-right: 2em; 
+     font-weight: bold;
+  }
+
+  .username input{
+    border: 2.5px solid black;
+  }
+  .password input{
+     border: 2.5px solid black;
+   }
+   .submit input[value="Sign In"]{
+    background-color: greenyellow;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 2em;
+  }
+
+  .submit input[value="Sign In"]:hover{
+    font-size: larger;
+  }

@@ -8,10 +8,12 @@ const userController = require('./controllers/User')
 const app = express()
 
 //Middleware
-app.use(bodyParser.json())
+app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(methodOverride('_method'))
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
 
 //routes
 app.use('/users', userController)
