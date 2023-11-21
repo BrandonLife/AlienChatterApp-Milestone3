@@ -1,54 +1,31 @@
 const React = require("react");
 const Default = require('./layouts/default')
-// This template is from https://snippets.wrappixel.com/simple-contact-us-form/
+
 
 function Contact() {
     return (
-        <Default>
-    <div class="contact3 py-5">
-    <div class="row no-gutters">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card-shadow">
-              <img src="https://media.istockphoto.com/id/1171546024/vector/spy-secret-agent-flat-vector-concept-illustration.jpg?s=612x612&w=0&k=20&c=VooIeIQSuW1Ame178XfauqrDu-_2UgC3JHhgHajT4As=" class="img-fluid" />
-            </div>
+  <Default>
+  <div className="contact-container">
+          <div className="image-container">
+            <img src="https://media.istockphoto.com/id/1171546024/vector/spy-secret-agent-flat-vector-concept-illustration.jpg?s=612x612&w=0&k=20&c=VooIeIQSuW1Ame178XfauqrDu-_2UgC3JHhgHajT4As="></img>
           </div>
-          <div class="col-lg-6">
-            <div class="contact-box ml-3">
-              <h1 class="font-weight-light mt-2">Make contact</h1>
-              <form class="mt-4">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <div class="form-group mt-2">
-                      <input class="form-control" type="text" placeholder="name" />
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="form-group mt-2">
-                      <input class="form-control" type="email" placeholder="email address" />
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="form-group mt-2">
-                      <input class="form-control" type="text" placeholder="phone" />
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="form-group mt-2">
-                      <textarea class="form-control" rows="3" placeholder="message"></textarea>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <button type="submit" class="btn btn-dark mt-3 text-white border-0 px-3 py-2"><span> SUBMIT</span></button>
-                  </div>
-                </div>
-              </form>
-            </div>
+          <div className="contact-form-container">
+            <form>
+              <h1>Make Contact</h1>
+              <div className="contact-name-container">
+              <label htmlFor="name">Name</label>
+              <input id="name" name="name" type="text"></input>
+              </div>
+              <div className="contact-email-container">
+              <label htmlFor="email">Email</label>
+              <input id="email" name="email" type="text"></input> 
+              </div>
+              <div className="contact-message-container">
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" type="text"></textarea> 
+              </div>
+          </form>
           </div>
-        </div>
-      </div>
-    </div>
   </div>
   </Default> 
     )

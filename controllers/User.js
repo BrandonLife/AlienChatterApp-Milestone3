@@ -85,8 +85,9 @@ router.post('/login', async (req, res) => {
     password: user.password,
   };
   // Create a jsonwebtoken that expires in 5 days
-    const token = jwt.sign(payload, mysecretkey, { expiresIn: '5d' });
-    
+  const token = jwt.sign(payload, mysecretkey, { expiresIn: '5d' });
+  // The following local code is from https://stackoverflow.com/questions/52474208/react-localstorage-is-not-defined-error-showing
+
   // Send the token back to the client
   console.log("User logged in")
   res.status(200).redirect('/users')
