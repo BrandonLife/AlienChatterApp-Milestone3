@@ -14,7 +14,7 @@ today= `${month}/${day}/${fullYear} at ${currentTime}`
 function newPost() {
     return (
 <Default>
-<div className="blog-form-container">
+<div className="add-post-form-container">
   <form action='/posts/' method='POST'>
     <h1>Add Comment</h1>
   <div className='form-group newInput'>

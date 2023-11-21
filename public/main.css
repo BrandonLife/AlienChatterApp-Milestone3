@@ -344,9 +344,9 @@
 
   /* Blog */
 
-  .blog-form-container{
+  .add-post-form-container{
     position: absolute;
-    left: 2%;
+    left: 40%;
     top: 30%;
     background-color: lightgray;
     padding: 3.5em;
@@ -354,7 +354,7 @@
     border-radius: 2em;
   }
 
-  .blog-form-container label{
+  .add-post-form-container{
     font-weight: bold;
     font-size: 20px;
   }

@@ -3,8 +3,8 @@ const Default = require('./layouts/default')
 function Blog({ posts }) {
     const postsDisplay = posts.map((post) => {
         return (
-            <div className="post-display">
-                <h1>{post.title}</h1>
+            <div key={post._id} className="post-display">
+                <a href={`/posts/${post._id}`}><h1>{post.title}</h1></a>
                 <span>Made on {post.dateMade} by {post.author}</span>
                 <p>{post.comment}</p>
             </div>
