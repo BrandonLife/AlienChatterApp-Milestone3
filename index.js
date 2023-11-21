@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const mongoose = require("mongoose")
 require("dotenv").config();
 const userController = require('./controllers/User')
+const postController = require('./controllers/Post')
 const app = express()
 
 //Middleware
@@ -17,6 +18,7 @@ app.engine('jsx', require('express-react-views').createEngine());
 
 //routes
 app.use('/users', userController)
+app.use('/posts', postController)
 
 
 //Mongo DB connection

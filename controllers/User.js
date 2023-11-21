@@ -21,11 +21,6 @@ router.get('/about', (req, res) => {
   res.render('About')
 })
 
-// Get blog page
-router.get('/blog', (req, res) => {
-  res.render('Blog')
-})
-
 // Get about page
 router.get('/contact', (req, res) => {
   res.render('Contact')

@@ -1,14 +1,20 @@
 const React = require("react");
 const Default = require('./layouts/default')
-
-function Blog() {
-    return (
-        <div>
-            <Default>
-                Blog
-            </Default>
-        </div>
-    )
+function Blog({ posts }) {
+    const postsDisplay = posts.map((post) => {
+        return (
+            <div className="post-display">
+                <h1>{post.title}</h1>
+                <span>Made on {post.dateMade} by {post.author}</span>
+                <p>{post.comment}</p>
+            </div>
+        )
+    }) 
+  return (
+    <Default>
+    {postsDisplay}  
+   </Default>
+  )
 }
-  
-module.exports =Blog
+
+module.exports = Blog
