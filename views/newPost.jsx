@@ -26,8 +26,16 @@ function newPost() {
   <input type='text' id='author' name='author' />
   </div>
   <div className='form-group newInput'>
-  < label htmlFor= 'comment'>Comment</label><br></br>
-  <textarea type='text' id='comment' name='comment' />
+  < label htmlFor= 'image'>Image</label><br></br>
+  <input type='text' id='image' name='image' />
+  </div>
+  <div className='form-group newInput'>
+  < label htmlFor= 'description'>Description</label><br></br>
+  <textarea type='text' id='description' name='description' />
+  </div>
+  <div className='form-group newInput'>
+  < label htmlFor= 'subject'>Subject</label><br></br>
+  <input type='text' id='subject' name='subject' />
   </div>
   <div className='form-group newInput'>
   < label htmlFor= 'dateMade'>DateMade</label><br></br>

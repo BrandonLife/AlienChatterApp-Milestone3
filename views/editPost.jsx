@@ -26,8 +26,16 @@ function editPost({post}) {
   <input type='text' id='author' name='author'  value={post.author} />
   </div>
   <div className='form-group newInput'>
-  < label htmlFor= 'comment'>Comment</label><br></br>
-  <textarea type='text' id='comment' name='comment'  value={post.comment} />
+  < label htmlFor= 'subject'>Subject</label><br></br>
+  <input type='text' id='subject' name='subject'  value={post.subject} />
+  </div>
+  <div className='form-group newInput'>
+  < label htmlFor= 'description'>Description</label><br></br>
+  <textarea type='text' id='description' name='description'  value={post.description} />
+  </div>
+  <div className='form-group newInput'>
+  < label htmlFor= 'image'>Image</label><br></br>
+  <input type='text' id='image' name='image'  value={post.image} />
   </div>
   <div className='form-group newInput'>
   < label htmlFor= 'dateMade'>DateMade</label><br></br>

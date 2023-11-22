@@ -10,8 +10,14 @@ function specificPost({post}) {
             <div className="specific-post-dateMade"> 
                 <span>Made on {post.dateMade} by {post.author }</span>
             </div>
-            <div className="specific-post-comment"> 
-                <p>{post.comment }</p>
+            <div className="specific-post-image"> 
+              <img src={post.image}></img>
+            </div>
+            <div className="specific-post-subject"> 
+                <p>Subject: {post.subject }</p>
+            </div>
+            <div className="specific-post-description"> 
+                <p>{post.description }</p>
             </div>
             <div className="specific-post-button-container">
                 <div className="specific-post-btn-edit">

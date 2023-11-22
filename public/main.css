@@ -130,23 +130,27 @@
   .float-left{
     text-align: center;
     float: left;
-    width: 45%;
+    width: 41.5%;
     border: 2px solid black;
     border-radius: 2em;
     margin-top: 1.5em;
     background-color: rgb(170, 167, 167);
     box-shadow: 2px 5px gray;
+    position: absolute;
+    left: 3em;
    
 }
 .float-right{
     text-align: center;
    float: right;
-   width: 54%;
+   width: 48%;
    border: 2px solid black;
    border-radius: 2em;
    margin-top: 1.5em;
    background-color: rgb(163, 159, 159);
    box-shadow: 2px 5px gray;
+   position: absolute;
+   right: 3em;
    
 }
 
@@ -347,7 +351,7 @@
   .add-post-form-container{
     position: absolute;
     left: 40%;
-    top: 30%;
+    top: 20%;
     background-color: lightgray;
     padding: 3.5em;
     border: 2px solid black;
@@ -357,4 +361,109 @@
   .add-post-form-container{
     font-weight: bold;
     font-size: 20px;
+  }
+  /* Post display */
+  .post-container{
+    display: flex;
+    gap: .5em;
+  }
+  .post-display{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    width: 25%;
+    border: 3px solid black;
+    margin-top: 1.5em;
+    border-radius: 2em;
+  }
+
+  .post-display a{
+    text-align: center;
+  }
+
+  .post-header-container {
+    background-color:lightgray;
+    width: 30%;
+    margin-left: 40em;
+    border: 2px solid black;
+    margin-top: 1em;
+    border-radius: 2em;
+  }
+  .post-header-container h1{
+    text-align: center;
+  }
+
+  /* Specific post */
+  .specific-post-container{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    width: 60%;
+    margin: 8em 10em 10em 20em;
+    border: 2px solid black;
+    border-radius: 2em;
+  }
+
+.specific-post-title h1{
+  text-align: center;
+  background-color: greenyellow;
+  width: 30%;
+  border: 2px solid black;
+  margin-left: 12em;
+}
+
+  .specific-post-image img{
+  width: 10%;
+  padding-left: 10em;
+  }
+
+  .specific-post-image img{
+    width: 12%;
+    padding-left: 10em;
+    }
+
+  .specific-post-dateMade span{
+      font-weight: bold;
+      }
+
+.specific-post-subject p{
+    padding-left: .5em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+.specific-post-description p{
+    padding-left: .5em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+
+  .specific-post-button-container{
+    display: flex;
+    margin: 2em;
+    gap: 1.5em
+  }
+
+  .specific-post-btn-edit button{
+    background-color: yellow;
+    font-size: 1.65em;
+    border-radius: .5em;
+    font-weight: bold;
+  }
+
+  .specific-post-btn-delete input{
+    background-color: red;
+    font-size: 1.65em;
+    border-radius: .5em;
+    font-weight: bold;
+  }
+
+  .specific-post-btn-edit button:hover{
+    font-size: 2em;
+    box-shadow: 2px 2px black;
+  }
+
+  .specific-post-btn-delete input:hover{
+    font-size: 2em;
+    box-shadow: 2px 2px black;
   }
