@@ -16,18 +16,6 @@ function Default(html) {
             <div className='nav-link'>
                 <a href='/users/'>Home</a>
             </div>
-            <div className='nav-link'>
-                <a href='/users/about'>About</a>
-            </div>
-            <div className='nav-link'>
-                <a href='/posts/new'>Add Post</a>
-            </div>
-            <div className='nav-link'>
-                <a href='/posts/blog'>Blog</a>
-            </div>
-            <div className='nav-link'>
-                <a href='/users/contact'>Contact Us</a>
-            </div>
           </div>
             <div className='login'>
                 <div className='nav-link-right'>

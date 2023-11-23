@@ -41,13 +41,13 @@ router.get('/userlogin', (req, res) => {
 })
 
 // Get about page
-router.get('/about', (req, res) => {
-  res.render('About')
+router.get('/about',verifyUser,(req, res) => {
+  res.render('About', {user: req.user})
 })
 
-// Get about page
-router.get('/contact', (req, res) => {
-  res.render('Contact')
+// Get contact page
+router.get('/contact', verifyUser, (req, res) => {
+  res.render('Contact', {user: req.user})
 })
 // Get a specific user 
 
@@ -83,7 +83,6 @@ router.post('/register', async (req, res) => {
 //Login post route - https://blog.bitsrc.io/how-to-use-jwt-for-authentication-and-create-a-login-system-in-node-js-and-mongodb-83bb852e777a
 router.post('/login', async (req, res) => {
   const { username, password } = req.body
-  console.log(username, password, 'login route')
     // Find user by username
     const user = await User.findOne({username})
     

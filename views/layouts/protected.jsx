@@ -33,6 +33,7 @@ function protectedDefault(html) {
             <div className='login'>
                         <div className='nav-link-right'>
                             <form action="/users/logout" method="POST">
+                                {/* this had to be a self closing input tag */}
                             <input className="logout-input" type="submit" value={`Logout ${html.user}`}/> 
                     </form>
                    

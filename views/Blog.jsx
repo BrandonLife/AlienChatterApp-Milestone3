@@ -1,6 +1,7 @@
 const React = require("react");
 const Default = require('./layouts/default')
-function Blog({ posts }) {
+const Protected = require('./layouts/protected')
+function Blog({ posts, user }) {
     const postsDisplay = posts.map((post) => {
         return (
             <div key={post._id} className="post-container">
@@ -12,14 +13,24 @@ function Blog({ posts }) {
             </div>
         )
     }) 
-  return (
-      <Default>
-    <div className="post-header-container">
-          <h1>Community Chatter</h1>      
-    </div>
+    return (
+        <div>
+            {user ? (
+             <Protected user= {user}>
+             <div className="post-header-container">
+                   <h1>Community Chatter</h1>      
+             </div>
+            {postsDisplay}  
+             </Protected>
+            ): (
+                <Default>
+                <div className="post-header-container">
+                      <h1>Please Sign in</h1>      
+                </div>
+                </Default>     
+        )}
    
-    {postsDisplay}  
-   </Default>
+    </div>
   )
 }
 
