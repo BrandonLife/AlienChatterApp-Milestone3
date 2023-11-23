@@ -2,17 +2,24 @@ const router = require('express').Router()
 const User = require('../models/User')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
-
+let user= false
 
 // We need to verify the user- https://www.youtube.com/watch?v=yHdkG33l7tQ
 const verifyUser = (req, res, next) => {
   const token = req.cookies.token
   const mysecretkey = process.env.SECRET_CODE;
   if (!token) {
-    res.status(401).send({message: "There is no token"})
+    res.status(401).render('Home')
   } else {
     jwt.verify(token, mysecretkey, (err, decoded) => {
-      if (err) return res.json("Token is wrong")
+      if (err) {
+        // Found these two lines from chatgpt
+        res.clearCookie('token')
+        req.user= user
+      } else {
+        user = true
+        req.user= user
+      }
       next()
     } )
   }
@@ -21,7 +28,7 @@ const verifyUser = (req, res, next) => {
 
 // Get home page
 router.get('/', verifyUser, (req, res) => {
-  res.render('Home')
+  res.render('Home', {user: req.user})
 })
 //Get register page
 router.get('/registration', (req, res) => {
@@ -105,7 +112,11 @@ router.post('/login', async (req, res) => {
   console.log("User logged in")
   res.status(200).redirect('/users')
 })
-
+// Got this idea from chatgpt
+router.get('/logout', (req, res) => {
+ res.clearCookie('token')
+ res.render('/userlogin')
+})
 
 //Edit User
 router.put('/:id', async (req, res) => {
