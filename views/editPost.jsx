@@ -14,9 +14,9 @@ const Default = require('./layouts/default')
 function editPost({post}) {
     return (
 <Default>
-<div className="blog-form-container">
+<div className="add-post-form-container">
   <form action={`/posts/${post._id}?_method=PUT`} method='POST'>
-    <h1>Add Comment</h1>
+    <h1>Edit Post</h1>
   <div className='form-group newInput'>
   < label htmlFor= 'title'>Title</label><br></br>
   <input type='text' id='title' name='title' value={post.title} />

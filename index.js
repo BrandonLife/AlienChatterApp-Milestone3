@@ -2,6 +2,7 @@
 const express = require("express");
 const methodOverride = require('method-override')
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
 const mongoose = require("mongoose")
 require("dotenv").config();
 const userController = require('./controllers/User')
@@ -11,6 +12,7 @@ const app = express()
 //Middleware
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser())
 app.use(express.static("public"));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jsx');

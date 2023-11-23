@@ -2,8 +2,25 @@ const router = require('express').Router()
 const User = require('../models/User')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
+
+
+// We need to verify the user- https://www.youtube.com/watch?v=yHdkG33l7tQ
+const verifyUser = (req, res, next) => {
+  const token = req.cookies.token
+  const mysecretkey = process.env.SECRET_CODE;
+  if (!token) {
+    res.status(401).send({message: "There is no token"})
+  } else {
+    jwt.verify(token, mysecretkey, (err, decoded) => {
+      if (err) return res.json("Token is wrong")
+      next()
+    } )
+  }
+}
+
+
 // Get home page
-router.get('/', (req, res) => {
+router.get('/', verifyUser, (req, res) => {
   res.render('Home')
 })
 //Get register page
@@ -82,7 +99,8 @@ router.post('/login', async (req, res) => {
   // Create a jsonwebtoken that expires in 5 days
   const token = jwt.sign(payload, mysecretkey, { expiresIn: '5d' });
   // The following local code is from https://stackoverflow.com/questions/52474208/react-localstorage-is-not-defined-error-showing
-
+  // I found out the cookie res.cooke from this youtube channel https://www.youtube.com/watch?v=yHdkG33l7tQ
+  res.cookie('token', token)
   // Send the token back to the client
   console.log("User logged in")
   res.status(200).redirect('/users')

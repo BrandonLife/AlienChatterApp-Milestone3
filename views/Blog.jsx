@@ -6,7 +6,7 @@ function Blog({ posts }) {
             <div key={post._id} className="post-container">
             <div  className="post-display">
                 <a href={`/posts/${post._id}`}><h1>{post.title}</h1></a>
-                <span>Made on {post.dateMade} by {post.author}</span>
+                <span>Made at {post.dateMade} by {post.author}</span>
                 <p>{post.comment}</p>
                 </div>
             </div>

@@ -10,13 +10,13 @@ let fullYear = today.getFullYear()
 let time = new Date()
 let currentTime = time.getHours() + ':' + time.getMinutes() + ":" + time.getSeconds()
 
-today= `${month}/${day}/${fullYear} at ${currentTime}`
+today= `${currentTime} on ${month}/${day}/${fullYear} `
 function newPost() {
     return (
 <Default>
 <div className="add-post-form-container">
   <form action='/posts/' method='POST'>
-    <h1>Add Comment</h1>
+    <h1>Add Post</h1>
   <div className='form-group newInput'>
   < label htmlFor= 'title'>Title</label><br></br>
   <input type='text' id='title' name='title' />
