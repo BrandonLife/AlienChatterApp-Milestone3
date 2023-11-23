@@ -17,8 +17,8 @@ const verifyUser = (req, res, next) => {
         res.clearCookie('token')
         req.user= user
       } else {
-        user = true
-        req.user= user
+        console.log(decoded, 'decoded')
+        req.user= decoded.username
       }
       next()
     } )
@@ -57,6 +57,12 @@ router.get('/:id', async (req, res) => {
     res.render('Home', {user})
 })
 
+// Got this idea from chatgpt
+router.post('/logout', (req, res) => {
+  req.user = false
+  res.clearCookie('token')
+ res.redirect('/users/userlogin')
+})
 
 
 //Create new user, info from https://blog.bitsrc.io/how-to-use-jwt-for-authentication-and-create-a-login-system-in-node-js-and-mongodb-83bb852e777a
@@ -112,11 +118,7 @@ router.post('/login', async (req, res) => {
   console.log("User logged in")
   res.status(200).redirect('/users')
 })
-// Got this idea from chatgpt
-router.get('/logout', (req, res) => {
- res.clearCookie('token')
- res.render('/userlogin')
-})
+
 
 //Edit User
 router.put('/:id', async (req, res) => {

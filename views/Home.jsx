@@ -6,7 +6,7 @@ function Home({ user }) {
   return (
     <div>
      {user ? (
-  <Protected>
+  <Protected user= {user}>
   <div className='home-container'>
     <div className='float-left'>
       <h1>News</h1>

@@ -1,6 +1,6 @@
 const React = require("react");
-const User = require("../../models/User");
 function protectedDefault(html) {
+    // console.log(html.user, "can i get user")
     
     return (
     <html lang="en">
@@ -31,8 +31,11 @@ function protectedDefault(html) {
             </div>
           </div>
             <div className='login'>
-                <div className='nav-link-right'>
-                    <a href='/users/logout'>Logout</a>
+                        <div className='nav-link-right'>
+                            <form action="/users/logout" method="POST">
+                            <input className="logout-input" type="submit" value={`Logout ${html.user}`}/> 
+                    </form>
+                   
                 </div>
             </div>
                 </div> 
