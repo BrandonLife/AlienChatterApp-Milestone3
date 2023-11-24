@@ -22,6 +22,16 @@ function specificPost({post, user}) {
                 </div>
                 <div className="specific-post-description"> 
                     <p>{post.description }</p>
+                        </div>
+                        <div className="specific-post-button-container">
+                    <div className="specific-post-btn-edit">
+                    <a href={`/posts/${post._id}/edit`}><button>EDIT</button></a>
+                    </div>
+                    <div className="specific-post-btn-delete">
+                    <form action={`/posts/${post._id}?_method=DELETE`} method="POST">
+                    <input type="submit" value="DELETE"/>
+                    </form>
+                    </div>
                 </div>
                 </div>
                 </Protected>     

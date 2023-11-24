@@ -1,6 +1,6 @@
 const React = require("react");
 function protectedDefault(html) {
-    console.log(html, "can i get user")
+    // console.log(html, "can i get user")
     
     return (
     <html lang="en">
@@ -15,10 +15,10 @@ function protectedDefault(html) {
     <div className='nav-container'>
         <div className='nav-link-container'>
             <div className='nav-link'>
-                <a href='/users/'>Home</a>
+                <a href='/posts/'>Home</a>
             </div>
             <div className='nav-link'>
-                <a href='/users/about'>About</a>
+                <a href='/posts/about'>About</a>
             </div>
             <div className='nav-link'>
                 <a href='/posts/new'>Add Post</a>
@@ -27,7 +27,7 @@ function protectedDefault(html) {
                 <a href='/posts/blog'>Blog</a>
             </div>
             <div className='nav-link'>
-                <a href='/users/contact'>Contact Us</a>
+                <a href='/posts/contact'>Contact Us</a>
             </div>
           </div>
             <div className='login'>

@@ -28,15 +28,29 @@ const verifyUser = (req, res, next) => {
 router.get('/new', verifyUser, async (req, res) => {
     res.render('newPost', {user:req.user})
 })
+// Get home page
+router.get('/', verifyUser, (req, res) => {
+  res.render('Home', {user: req.user})
+})
 // Get all posts
-router.get('/blog', verifyUser,  async (req, res) => {
+router.get('/blog', verifyUser, async (req, res) => {
     const posts = await Post.find().populate('user')
     res.render('Blog', {posts, user:req.user})
+})
+
+// Get about page
+router.get('/about',verifyUser,(req, res) => {
+  res.render('About', {user: req.user})
+})
+
+// Get contact page
+router.get('/contact', verifyUser, (req, res) => {
+  res.render('Contact', {user: req.user})
 })
 // Get a specific post page
 router.get('/:id', verifyUser, async (req, res)=> {
     const { id } = req.params
-    const post = await Post.findById(id).populate('user')
+    const post = await Post.findById(id)
     res.render('SpecificPost', {post, user:req.user})
 })
 

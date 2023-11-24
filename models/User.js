@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const Post = require('./Post')
 // used this site to help me with jwt https://www.loginradius.com/blog/engineering/nodejs-and-mongodb-application-authentication-by-jwt/
 const userSchema = new mongoose.Schema({
     username: {
@@ -27,4 +28,7 @@ userSchema.virtual('posts', {
     foreignField: 'user'
 })
 
+userSchema.post('findOneAndDelete', async function () {
+    await Post.deleteMany({user: this._conditions._id})
+})
 module.exports = mongoose.model("User", userSchema)

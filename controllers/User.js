@@ -17,7 +17,6 @@ const verifyUser = (req, res, next) => {
         res.clearCookie('token')
         req.user= user
       } else {
-        console.log(decoded, 'decoded')
         req.user= decoded.username
       }
       next()
@@ -26,10 +25,6 @@ const verifyUser = (req, res, next) => {
 }
 
 
-// Get home page
-router.get('/', verifyUser, (req, res) => {
-  res.render('Home', {user: req.user})
-})
 //Get register page
 router.get('/registration', (req, res) => {
     res.render('Register')
@@ -40,15 +35,7 @@ router.get('/userlogin', (req, res) => {
     res.render('Login')
 })
 
-// Get about page
-router.get('/about',verifyUser,(req, res) => {
-  res.render('About', {user: req.user})
-})
 
-// Get contact page
-router.get('/contact', verifyUser, (req, res) => {
-  res.render('Contact', {user: req.user})
-})
 // Get a specific user 
 
 router.get('/:id', verifyUser,  async (req, res) => {
@@ -77,7 +64,7 @@ router.post('/register', async (req, res) => {
   })
     console.log(req.body, "req.body")
     // await User.create(req.body)
-    res.status(303).redirect('/users')
+    res.status(303).redirect('/posts/')
 })
 
 //Login post route - https://blog.bitsrc.io/how-to-use-jwt-for-authentication-and-create-a-login-system-in-node-js-and-mongodb-83bb852e777a
@@ -115,7 +102,7 @@ router.post('/login', async (req, res) => {
   res.cookie('token', token)
   // Send the token back to the client
   console.log("User logged in")
-  res.status(200).redirect('/users')
+  res.status(200).redirect('/posts/')
 })
 
 
