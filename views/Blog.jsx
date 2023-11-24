@@ -1,8 +1,8 @@
 const React = require("react");
 const Default = require('./layouts/default')
 const Protected = require('./layouts/protected')
-function Blog({ posts, user }) {
-    console.log(posts)
+function Blog({ posts, users, user }) {
+    console.log(users)
     const postsDisplay = posts.map((post) => {
         return (
             <div key={post._id} className="post-container">

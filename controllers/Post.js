@@ -34,8 +34,13 @@ router.get('/', verifyUser, (req, res) => {
 })
 // Get all posts
 router.get('/blog', verifyUser, async (req, res) => {
-    const posts = await Post.find().populate('user')
-    res.render('Blog', {posts, user:req.user})
+  const posts = await Post.find().populate('user')
+  const users= await User.find().populate('posts')
+  res.render('Blog', {posts, users, user:req.user})
+})
+
+router.get('/user', async (req, res) => {
+
 })
 
 // Get about page
