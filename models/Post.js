@@ -6,7 +6,11 @@ const postSchema = new mongoose.Schema({
     subject: String,
     description: String,
     image: String,
-    dateMade: String
+    dateMade: String,
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
+    }
 })
 
 module.exports = mongoose.model("Post", postSchema)

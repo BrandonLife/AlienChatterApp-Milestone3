@@ -1,6 +1,6 @@
 const React = require("react");
 function protectedDefault(html) {
-    // console.log(html.user, "can i get user")
+    console.log(html, "can i get user")
     
     return (
     <html lang="en">
@@ -36,7 +36,6 @@ function protectedDefault(html) {
                                 {/* this had to be a self closing input tag */}
                             <input className="logout-input" type="submit" value={`Logout ${html.user}`}/> 
                     </form>
-                   
                 </div>
             </div>
                 </div> 

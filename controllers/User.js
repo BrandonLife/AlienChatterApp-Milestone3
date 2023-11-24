@@ -51,10 +51,10 @@ router.get('/contact', verifyUser, (req, res) => {
 })
 // Get a specific user 
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', verifyUser,  async (req, res) => {
     const { id } = req.params
-    const user = await User.findById(id)
-    res.render('Home', {user})
+    const user = await User.findById(id).populate('posts')
+    res.render('oneUser', {user, oneUser: req.user, userId: id})
 })
 
 // Got this idea from chatgpt
@@ -120,14 +120,14 @@ router.post('/login', async (req, res) => {
 
 
 //Edit User
-router.put('/:id', async (req, res) => {
+router.put('/:id', verifyUser, async (req, res) => {
     const { id } = req.params
     let user = await User.findById(id)
     res.render('UserEdit', {user})
 })
 
 //Delete User
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', verifyUser, async (req, res) => {
     const { id } = req.params
     await User.findByIdAndDelete(id)
     res.redirect('/users')

@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const Post = require('../models/Post')
 const jwt = require('jsonwebtoken')
+const User = require('../models/User')
 let user = false
 
 // We need to verify the user- https://www.youtube.com/watch?v=yHdkG33l7tQ
@@ -29,13 +30,13 @@ router.get('/new', verifyUser, async (req, res) => {
 })
 // Get all posts
 router.get('/blog', verifyUser,  async (req, res) => {
-    const posts = await Post.find()
+    const posts = await Post.find().populate('user')
     res.render('Blog', {posts, user:req.user})
 })
 // Get a specific post page
 router.get('/:id', verifyUser, async (req, res)=> {
     const { id } = req.params
-    const post = await Post.findById(id)
+    const post = await Post.findById(id).populate('user')
     res.render('SpecificPost', {post, user:req.user})
 })
 

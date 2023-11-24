@@ -26,7 +26,7 @@ function newPost({user}) {
           </div>
           <div className='form-group newInput'>
           < label htmlFor= 'author'>Author</label><br></br>
-          <input type='text' id='author' name='author' />
+          <input type='text' id='author' name='author' value={user} />
           </div>
           <div className='form-group newInput'>
           < label htmlFor= 'image'>Image</label><br></br>
@@ -43,7 +43,7 @@ function newPost({user}) {
           <div className='form-group newInput'>
           < label htmlFor= 'dateMade'>DateMade</label><br></br>
           <input type='text' id='dateMade' name='dateMade' value={today} />
-          </div>
+              </div>
          <input type='submit'></input>
         </form>
         </div>
