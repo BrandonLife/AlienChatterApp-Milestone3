@@ -17,7 +17,6 @@ const verifyUser = (req, res, next) => {
           res.clearCookie('token')
           req.user= user
         } else {
-          console.log(decoded, 'decoded')
           req.user= decoded.username
         }
         next()
@@ -25,23 +24,27 @@ const verifyUser = (req, res, next) => {
     }
   }
 // Get new post page
-router.get('/new', verifyUser, async (req, res) => {
-    res.render('newPost', {user:req.user})
+router.get('/new/:username', verifyUser, async (req, res) => {
+    const {username}= req.params
+    res.render('newPost', {user:req.user, username: username})
 })
 // Get home page
-router.get('/', verifyUser, (req, res) => {
+router.get('/home', verifyUser, (req, res) => {
   res.render('Home', {user: req.user})
 })
 // Get all posts
-router.get('/blog', verifyUser, async (req, res) => {
-  const posts = await Post.find().populate('user')
-  const users= await User.find().populate('posts')
-  res.render('Blog', {posts, users, user:req.user})
+router.get('/blog/:username', verifyUser, async (req, res) => {
+  const { username } = req.params
+  console.log(username)
+  const user = await User.findOne({username})
+  // console.log(user, "user")
+  const id = user._id
+  // const foundUser = await User.findById(id).populate('posts')
+  const posts = await Post.find({user})
+  console.log(posts, "posts of all posts route")
+  res.render('Blog', {posts, user:req.user})
 })
 
-router.get('/user', async (req, res) => {
-
-})
 
 // Get about page
 router.get('/about',verifyUser,(req, res) => {
@@ -55,7 +58,7 @@ router.get('/contact', verifyUser, (req, res) => {
 // Get a specific post page
 router.get('/:id', verifyUser, async (req, res)=> {
     const { id } = req.params
-    const post = await Post.findById(id)
+  const post = await Post.findById(id).populate('user')
     res.render('SpecificPost', {post, user:req.user})
 })
 
@@ -64,10 +67,25 @@ router.get('/:id/edit', verifyUser, async (req, res) => {
     let post = await Post.findById(id)
     res.render('editPost', {post, user:req.user})
 })
-// Create a post
-router.post('/', verifyUser, async (req, res) => {
-    await Post.create(req.body)
-    res.status(303).redirect('/posts/blog')
+// Create a post- i used alot of resources for this but mainly this helped me https://chat.openai.com/c/f65ac2f2-cb77-4751-9946-e8b654b29811
+router.post('/:username', verifyUser, async (req, res) => {
+  const {username}= req.params
+  const user = await User.findOne({ username: req.params.username }).populate('posts')
+  req.body.id = user._id
+  const foundUser = await User.findById(req.body.id)
+  const post = new Post({
+    author: req.body.author,
+    title: req.body.title,
+    subject: req.body.subject,
+    description: req.body.description,
+    image: req.body.image,
+    dateMade: req.body.dateMade,
+    user: foundUser._id
+  })
+
+  console.log(foundUser)
+  await post.save()
+    res.status(303).redirect(`/posts/blog/${username}`)
 })
 // Update Post
 router.put('/:id', verifyUser, async (req, res) => {
@@ -79,6 +97,6 @@ router.put('/:id', verifyUser, async (req, res) => {
 router.delete('/:id', verifyUser, async (req, res) => {
     const { id } = req.params
     await Post.findByIdAndDelete(id)
-    res.status(303).redirect('/posts/blog')
+    res.status(303).redirect('/posts/blog/home')
 })
 module.exports = router

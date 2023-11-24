@@ -12,13 +12,14 @@ let time = new Date()
 let currentTime = time.getHours() + ':' + time.getMinutes() + ":" + time.getSeconds()
 
 today= `${currentTime} on ${month}/${day}/${fullYear} `
-function newPost({user}) {
+function newPost({ user, userId }) {
+  
   return (
     <div>
       {user ? (
         <Protected user= {user}>
         <div className="add-post-form-container">
-          <form action='/posts/' method='POST'>
+          <form action={`/posts/${user}`} method='POST'>
             <h1>Add Post</h1>
           <div className='form-group newInput'>
           < label htmlFor= 'title'>Title</label><br></br>

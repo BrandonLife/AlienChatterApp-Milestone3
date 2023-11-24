@@ -1,7 +1,8 @@
 const React = require("react");
 const Default = require('./layouts/default')
 const Protected = require('./layouts/protected')
-function specificPost({post, user}) {
+function specificPost({ post, user }) {
+    console.log(post)
     return (
         <div>
         

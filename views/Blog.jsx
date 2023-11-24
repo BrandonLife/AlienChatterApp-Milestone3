@@ -1,12 +1,12 @@
 const React = require("react");
 const Default = require('./layouts/default')
 const Protected = require('./layouts/protected')
-function Blog({ posts, users, user }) {
-    console.log(users)
+function Blog({ posts, user}) {
+
     const postsDisplay = posts.map((post) => {
         return (
             <div key={post._id} className="post-container">
-            <div  className="post-display">
+                <div className="post-display">
                 <a href={`/posts/${post._id}`}><h1>{post.title}</h1></a>
                 <span>Made at {post.dateMade} by {post.author}</span>
                 <p>{post.comment}</p>
@@ -19,7 +19,7 @@ function Blog({ posts, users, user }) {
             {user ? (
              <Protected user= {user}>
              <div className="post-header-container">
-                   <h1>Community Chatter</h1>      
+                   <h1>Your Posts</h1>      
              </div>
             {postsDisplay}  
              </Protected>

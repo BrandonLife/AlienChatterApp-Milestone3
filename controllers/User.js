@@ -62,9 +62,9 @@ router.post('/register', async (req, res) => {
         image: image,
         password: hashedPassword
   })
-    console.log(req.body, "req.body")
+    // console.log(req.body, "req.body")
     // await User.create(req.body)
-    res.status(303).redirect('/posts/')
+    res.status(303).redirect('/posts/home')
 })
 
 //Login post route - https://blog.bitsrc.io/how-to-use-jwt-for-authentication-and-create-a-login-system-in-node-js-and-mongodb-83bb852e777a
@@ -102,7 +102,7 @@ router.post('/login', async (req, res) => {
   res.cookie('token', token)
   // Send the token back to the client
   console.log("User logged in")
-  res.status(200).redirect('/posts/')
+  res.status(200).redirect('/posts/home')
 })
 
 

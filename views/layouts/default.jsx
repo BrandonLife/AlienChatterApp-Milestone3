@@ -14,7 +14,7 @@ function Default(html) {
     <div className='nav-container'>
         <div className='nav-link-container'>
             <div className='nav-link'>
-                <a href='/posts/'>Home</a>
+                <a href='/posts/home'>Home</a>
             </div>
           </div>
             <div className='login'>
