@@ -1,0 +1,16 @@
+/* Add/Edit Post */
+
+.add-post-form-container{
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    background-color: lightgray;
+    padding: 3.5em;
+    border: 2px solid black;
+    border-radius: 2em;
+  }
+
+  .add-post-form-container{
+    font-weight: bold;
+    font-size: 20px;
+  }

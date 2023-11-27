@@ -1,0 +1,74 @@
+/* Specific post */
+.specific-post-container{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    width: 60%;
+    margin: 8em 10em 10em 20em;
+    border: 2px solid black;
+    border-radius: 2em;
+  }
+
+.specific-post-title h1{
+  text-align: center;
+  background-color: greenyellow;
+  width: 30%;
+  border: 2px solid black;
+  margin-left: 12em;
+}
+
+  .specific-post-image img{
+  width: 10%;
+  padding-left: 10em;
+  }
+
+  .specific-post-image img{
+    width: 12%;
+    padding-left: 10em;
+    }
+
+  .specific-post-dateMade span{
+      font-weight: bold;
+      }
+
+.specific-post-subject p{
+    padding-left: .5em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+.specific-post-description p{
+    padding-left: .5em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+
+  .specific-post-button-container{
+    display: flex;
+    margin: 2em;
+    gap: 1.5em
+  }
+
+  .specific-post-btn-edit button{
+    background-color: yellow;
+    font-size: 1.65em;
+    border-radius: .5em;
+    font-weight: bold;
+  }
+
+  .specific-post-btn-delete input{
+    background-color: red;
+    font-size: 1.65em;
+    border-radius: .5em;
+    font-weight: bold;
+  }
+
+  .specific-post-btn-edit button:hover{
+    font-size: 2em;
+    box-shadow: 2px 2px black;
+  }
+
+  .specific-post-btn-delete input:hover{
+    font-size: 2em;
+    box-shadow: 2px 2px black;
+  }

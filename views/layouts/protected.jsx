@@ -9,6 +9,14 @@ function protectedDefault(html) {
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>Alien Chatter</title>
                 <link rel="stylesheet" href="/main.css" />
+                <link rel="stylesheet" href="/Home.css" />
+                <link rel="stylesheet" href="/About.css" />
+                <link rel="stylesheet" href="/newPost.css" />
+                <link rel="stylesheet" href="/Blog.css" />
+                <link rel="stylesheet" href="/SpecificPost.css" />
+                <link rel="stylesheet" href="/editPost.css" />
+                <link rel="stylesheet" href="/Contact.css" />
+                
      </head>
             <body>
                 {/* beginning of nav */}

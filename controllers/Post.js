@@ -38,7 +38,7 @@ router.get('/blog/:username', verifyUser, async (req, res) => {
   console.log(username)
   const user = await User.findOne({username})
   // console.log(user, "user")
-  const id = user._id
+  // const id = user._id
   // const foundUser = await User.findById(id).populate('posts')
   const posts = await Post.find({user})
   console.log(posts, "posts of all posts route")

@@ -8,6 +8,10 @@ function Default(html) {
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>Alien Chatter</title>
                 <link rel="stylesheet" href="/main.css" />
+                <link rel="stylesheet" href="/Home.css" />
+                <link rel="stylesheet" href="/Login.css" />
+                <link rel="stylesheet" href="/Register.css" />
+               
      </head>
             <body>
                 {/* beginning of nav */}
