@@ -20,8 +20,8 @@ function protectedDefault(html) {
      </head>
             <body>
                 {/* beginning of nav */}
-    <div className='nav-container'>
-        <div className='nav-link-container'>
+    <div className='nav-container-protected'>
+        <div className='nav-link-container-protected'>
             <div className='nav-link'>
                 <a href='/posts/home'>Home</a>
             </div>
@@ -38,11 +38,12 @@ function protectedDefault(html) {
                 <a href='/posts/contact'>Contact Us</a>
             </div>
           </div>
-            <div className='login'>
+            <div className='login-protected'>
                         <div className='nav-link-right'>
                             <form action="/users/logout" method="POST">
                                 {/* this had to be a self closing input tag */}
-                            <input className="logout-input" type="submit" value={`Logout ${html.user}`}/> 
+                                <span>{`Welcome, ${html.user}` }</span>
+                            <input className="logout-input" type="submit" value={`Logout`}/> 
                     </form>
                 </div>
             </div>

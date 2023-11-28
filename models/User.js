@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Post = require('./Post')
-// used this site to help me with jwt https://www.loginradius.com/blog/engineering/nodejs-and-mongodb-application-authentication-by-jwt/
+
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
         ref: 'Post'
     }]
 })
-
+//This virtual was not working for me during this project
 // userSchema.virtual('posts', {
 //     ref: 'Post',
 //     localField: "_id",

@@ -15,13 +15,13 @@ function Default(html) {
      </head>
             <body>
                 {/* beginning of nav */}
-    <div className='nav-container'>
-        <div className='nav-link-container'>
+    <div className='nav-container-unprotected'>
+        <div className='nav-link-container-unprotected'>
             <div className='nav-link'>
                 <a href='/posts/home'>Home</a>
             </div>
           </div>
-            <div className='login'>
+            <div className='login-unprotected'>
                 <div className='nav-link-right'>
                     <a href='/users/registration'>Register</a>
                 </div>

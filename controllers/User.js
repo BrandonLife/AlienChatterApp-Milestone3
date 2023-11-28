@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt')
 let user= false
 
 // We need to verify the user- https://www.youtube.com/watch?v=yHdkG33l7tQ
+// used this site to help me with jwt https://www.loginradius.com/blog/engineering/nodejs-and-mongodb-application-authentication-by-jwt/
 const verifyUser = (req, res, next) => {
   const token = req.cookies.token
   const mysecretkey = process.env.SECRET_CODE;
@@ -44,7 +45,8 @@ router.get('/:id', verifyUser,  async (req, res) => {
     res.render('oneUser', {user, oneUser: req.user, userId: id})
 })
 
-// Got this idea from chatgpt
+// Got this idea from chatgpt how to create logout functionality with Express JS, express-react-views, NodeJs, jsx without React Framework, cookie-parser, and jsonwebtoken. I have four directories: Controllers, Models, public, and views. Why do keep the getting the response object when i hit the logout button
+//Here i was sending a get request so i kept getting a req object so i changed it to post and it worked
 router.post('/logout', (req, res) => {
   req.user = false
   res.clearCookie('token')
@@ -98,7 +100,7 @@ router.post('/login', async (req, res) => {
   // Create a jsonwebtoken that expires in 5 days
   const token = jwt.sign(payload, mysecretkey, { expiresIn: '5d' });
   // The following local code is from https://stackoverflow.com/questions/52474208/react-localstorage-is-not-defined-error-showing
-  // I found out the cookie res.cooke from this youtube channel https://www.youtube.com/watch?v=yHdkG33l7tQ
+  // I found out the cookie res.cookie from this youtube channel https://www.youtube.com/watch?v=yHdkG33l7tQ
   res.cookie('token', token)
   // Send the token back to the client
   console.log("User logged in")

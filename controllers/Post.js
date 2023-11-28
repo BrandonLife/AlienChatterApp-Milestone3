@@ -67,7 +67,8 @@ router.get('/:id/edit', verifyUser, async (req, res) => {
     let post = await Post.findById(id)
     res.render('editPost', {post, user:req.user})
 })
-// Create a post- i used alot of resources for this but mainly this helped me https://chat.openai.com/c/f65ac2f2-cb77-4751-9946-e8b654b29811
+// Create a post- i used alot of resources for this but mainly this helped me chatgpt -so i have a default.jsx. I am using jsx without React. I passed down  user object with the username into the default component which wraps my home component in home.jsx. how do i get the username on the screen?
+//i know that i needed to get the id of the user to be able to create a relationship so what i did was get the username and then from there get the id
 router.post('/:username', verifyUser, async (req, res) => {
   const {username}= req.params
   const user = await User.findOne({ username: req.params.username }).populate('posts')
