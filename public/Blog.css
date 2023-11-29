@@ -1,31 +1,113 @@
 
-   /* Post display */
-   .post-container{
-    display: flex;
-    gap: .5em;
-  }
-  .post-display{
-    display: flex;
-    flex-direction: column;
-    background-color: lightgray;
-    width: 25%;
-    border: 3px solid black;
-    margin-top: 1.5em;
-    border-radius: 2em;
-  }
+/* Styles for screens smaller than or equal to 600px */
+@media (max-width: 600px) {
+  /* CSS rules for small screens */
+    /* Post display */
+    .post-container{
+      display: flex;
+      flex-direction: column;
+    }
+    .post-display{
+      display: flex;
+      flex-direction: row;
+      background-color: lightgray;
+      width: 100%;
+      border: 3px solid black;
+      margin-top: 1.5em;
+      border-radius: 2em;
+      gap: 2em;
+    }
+  
+    .post-display a h1{
+      display: block;
+      text-align: center;
+      font-size: 17px;
+      position: absolute;
+      right: 212px;
+      margin-top: 15px;
+    }
+    .post-display span{
+      display: block;
+      text-align: center;
+    }
+    .post-header-container {
+      background-color: lightgray;
+      width: 100%;
+      border: 2px solid black;
+      margin-top: 1em;
+      border-radius: 2em;
+    }
+    .post-header-container h1{
+      text-align: center;
+    }
+}
 
-  .post-display a{
-    text-align: center;
-  }
+/* Styles for screens between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  /* CSS rules for medium screens */
+    /* Post display */
+    .post-container{
+      display: flex;
+      gap: .5em;
+    }
+    .post-display{
+      display: flex;
+      flex-direction: column;
+      background-color: lightgray;
+      width: 25%;
+      border: 3px solid black;
+      margin-top: 1.5em;
+      border-radius: 2em;
+    }
+  
+    .post-display a{
+      text-align: center;
+    }
+  
+    .post-header-container {
+      background-color:lightgray;
+      width: 30%;
+      margin-left: 40em;
+      border: 2px solid black;
+      margin-top: 1em;
+      border-radius: 2em;
+    }
+    .post-header-container h1{
+      text-align: center;
+    }
+}
 
-  .post-header-container {
-    background-color:lightgray;
-    width: 30%;
-    margin-left: 40em;
-    border: 2px solid black;
-    margin-top: 1em;
-    border-radius: 2em;
-  }
-  .post-header-container h1{
-    text-align: center;
-  }
+/* Styles for screens larger than 900px */
+@media (min-width: 901px) {
+  /* CSS rules for large screens */
+    /* Post display */
+    .post-container{
+      display: flex;
+      gap: .5em;
+    }
+    .post-display{
+      display: flex;
+      flex-direction: column;
+      background-color: lightgray;
+      width: 25%;
+      border: 3px solid black;
+      margin-top: 1.5em;
+      border-radius: 2em;
+    }
+  
+    .post-display a{
+      text-align: center;
+    }
+  
+    .post-header-container {
+      background-color:lightgray;
+      width: 30%;
+      margin-left: 40em;
+      border: 2px solid black;
+      margin-top: 1em;
+      border-radius: 2em;
+    }
+    .post-header-container h1{
+      text-align: center;
+    }
+}

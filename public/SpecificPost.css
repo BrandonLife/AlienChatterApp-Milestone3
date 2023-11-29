@@ -1,74 +1,243 @@
-/* Specific post */
+/* Styles for screens smaller than or equal to 600px */
+@media (max-width: 600px) {
+  /* CSS rules for small screens */
+  /* Specific post */
 .specific-post-container{
-    display: flex;
-    flex-direction: column;
-    background-color: lightgray;
-    width: 60%;
-    margin: 8em 10em 10em 20em;
-    border: 2px solid black;
-    border-radius: 2em;
-  }
-
-.specific-post-title h1{
-  text-align: center;
-  background-color: greenyellow;
-  width: 30%;
+  background-color: lightgray;
+  width: 100%;
   border: 2px solid black;
-  margin-left: 12em;
+  border-radius: 2em;
 }
 
-  .specific-post-image img{
-  width: 10%;
+.specific-post-title{
+  display: block;
+  width: 100%;
+}
+.specific-post-title h1{
+text-align: center;
+background-color: greenyellow;
+width: 100%;
+border: 2px solid black;
+
+}
+
+.specific-post-image img{
+display: inline;
+width: 60%;
+height: 350px;
+}
+
+
+.specific-post-dateMade span{
+    font-weight: bold;
+    width: auto;
+    }
+
+.specific-post-subject p{
+  padding-left: .5em;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  display: inline;
+  width: 30px;
+}
+
+.specific-post-description p{
+  padding-left: .5em;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  display: inline;
+  width: 13px;
+}
+
+.specific-post-button-container{
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+  gap: 1.5em
+}
+
+.specific-post-btn-edit button{
+  background-color: yellow;
+  font-size: 1em;
+  border-radius: .5em;
+  font-weight: bold;
+}
+
+.specific-post-btn-delete input{
+  background-color: red;
+  font-size: 1em;
+  border-radius: .5em;
+  font-weight: bold;
+}
+
+.specific-post-btn-edit button:hover{
+  font-size: 2em;
+  box-shadow: 2px 2px black;
+}
+
+.specific-post-btn-delete input:hover{
+  font-size: 2em;
+  box-shadow: 2px 2px black;
+}
+
+}
+
+/* Styles for screens between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  /* CSS rules for medium screens */
+  /* Specific post */
+.specific-post-container{
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  width: 60%;
+  margin: 8em 10em 10em 20em;
+  border: 2px solid black;
+  border-radius: 2em;
+}
+
+.specific-post-title h1{
+text-align: center;
+background-color: greenyellow;
+width: 30%;
+border: 2px solid black;
+margin-left: 12em;
+}
+
+.specific-post-image img{
+width: 10%;
+padding-left: 10em;
+}
+
+.specific-post-image img{
+  width: 12%;
   padding-left: 10em;
   }
 
-  .specific-post-image img{
-    width: 12%;
-    padding-left: 10em;
+.specific-post-dateMade span{
+    font-weight: bold;
     }
 
-  .specific-post-dateMade span{
-      font-weight: bold;
-      }
-
 .specific-post-subject p{
-    padding-left: .5em;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-  }
+  padding-left: .5em;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
 
 .specific-post-description p{
-    padding-left: .5em;
-    font-family: 'Courier New', Courier, monospace;
+  padding-left: .5em;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.specific-post-button-container{
+  display: flex;
+  margin: 2em;
+  gap: 1.5em
+}
+
+.specific-post-btn-edit button{
+  background-color: yellow;
+  font-size: 1.65em;
+  border-radius: .5em;
+  font-weight: bold;
+}
+
+.specific-post-btn-delete input{
+  background-color: red;
+  font-size: 1.65em;
+  border-radius: .5em;
+  font-weight: bold;
+}
+
+.specific-post-btn-edit button:hover{
+  font-size: 2em;
+  box-shadow: 2px 2px black;
+}
+
+.specific-post-btn-delete input:hover{
+  font-size: 2em;
+  box-shadow: 2px 2px black;
+}
+
+}
+
+/* Styles for screens larger than 900px */
+@media (min-width: 901px) {
+  /* CSS rules for large screens */
+  /* Specific post */
+.specific-post-container{
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  width: 60%;
+  margin: 8em 10em 10em 20em;
+  border: 2px solid black;
+  border-radius: 2em;
+}
+
+.specific-post-title h1{
+text-align: center;
+background-color: greenyellow;
+width: 30%;
+border: 2px solid black;
+margin-left: 12em;
+}
+
+.specific-post-image img{
+width: 10%;
+padding-left: 10em;
+}
+
+.specific-post-image img{
+  width: 12%;
+  padding-left: 10em;
+  }
+
+.specific-post-dateMade span{
     font-weight: bold;
-  }
+    }
 
-  .specific-post-button-container{
-    display: flex;
-    margin: 2em;
-    gap: 1.5em
-  }
+.specific-post-subject p{
+  padding-left: .5em;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
 
-  .specific-post-btn-edit button{
-    background-color: yellow;
-    font-size: 1.65em;
-    border-radius: .5em;
-    font-weight: bold;
-  }
+.specific-post-description p{
+  padding-left: .5em;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
 
-  .specific-post-btn-delete input{
-    background-color: red;
-    font-size: 1.65em;
-    border-radius: .5em;
-    font-weight: bold;
-  }
+.specific-post-button-container{
+  display: flex;
+  margin: 2em;
+  gap: 1.5em
+}
 
-  .specific-post-btn-edit button:hover{
-    font-size: 2em;
-    box-shadow: 2px 2px black;
-  }
+.specific-post-btn-edit button{
+  background-color: yellow;
+  font-size: 1.65em;
+  border-radius: .5em;
+  font-weight: bold;
+}
 
-  .specific-post-btn-delete input:hover{
-    font-size: 2em;
-    box-shadow: 2px 2px black;
-  }
+.specific-post-btn-delete input{
+  background-color: red;
+  font-size: 1.65em;
+  border-radius: .5em;
+  font-weight: bold;
+}
+
+.specific-post-btn-edit button:hover{
+  font-size: 2em;
+  box-shadow: 2px 2px black;
+}
+
+.specific-post-btn-delete input:hover{
+  font-size: 2em;
+  box-shadow: 2px 2px black;
+}
+
+}

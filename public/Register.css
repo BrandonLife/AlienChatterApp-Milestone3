@@ -1,65 +1,212 @@
-/* Register */
+/* Styles for screens smaller than or equal to 600px */
+@media (max-width: 600px) {
+  /* CSS rules for small screens */
+  /* Register */
 
 .register-container{
-    text-align: center;
-    display: flex;
-    margin-top: 8%;
+  text-align: center;
+  display: flex;
+  margin-top: 8%;
 
-    justify-content: center;
+  justify-content: center;
+}
+
+.register-container form{
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
+   background-color: lightgray;
+   width: 27%;
+   padding: 2em;
+   border: 2px solid black;
+   box-shadow: 2px 10px gray;
+   border-radius: 1.5em;
+   position: absolute;
+   right: 40%;
+}
+
+.username label{
+  padding-right: 2em; 
+  font-weight: bold;
+}
+.password label{
+   padding-right: 2em; 
+   font-weight: bold;
+}
+.bio label{
+   padding-right: 3.5em; 
+   font-weight: bold;
+}
+.image label{
+   padding-right: 3.5em; 
+   font-weight: bold;
+}
+
+.username input{
+  border: 2.5px solid black;
+}
+.password input{
+   border: 2.5px solid black;
  }
- 
- .register-container form{
-     display: flex;
-     flex-direction: column;
-     gap: 2em;
-     background-color: lightgray;
-     width: 27%;
-     padding: 2em;
-     border: 2px solid black;
-     box-shadow: 2px 10px gray;
-     border-radius: 1.5em;
-     position: absolute;
-     right: 40%;
+ .bio textarea{
+   border: 2.5px solid black;
  }
- 
- .username label{
-    padding-right: 2em; 
-    font-weight: bold;
+ .image input{
+   border: 2.5px solid black;
  }
- .password label{
-     padding-right: 2em; 
-     font-weight: bold;
-  }
-  .bio label{
-     padding-right: 3.5em; 
-     font-weight: bold;
-  }
-  .image label{
-     padding-right: 3.5em; 
-     font-weight: bold;
-  }
- 
-  .username input{
-    border: 2.5px solid black;
-  }
-  .password input{
-     border: 2.5px solid black;
-   }
-   .bio textarea{
-     border: 2.5px solid black;
-   }
-   .image input{
-     border: 2.5px solid black;
-   }
- 
-   .submit input[value="Create Account"]{
-     background-color: greenyellow;
-     color: black;
-     font-weight: bold;
-     border: 2px solid black;
-     border-radius: 2em;
-   }
- 
-   .submit input[value="Create Account"]:hover{
-     font-size: larger;
-   }
+
+ .submit input[value="Create Account"]{
+   background-color: greenyellow;
+   color: black;
+   font-weight: bold;
+   border: 2px solid black;
+   border-radius: 2em;
+ }
+
+ .submit input[value="Create Account"]:hover{
+   font-size: larger;
+ }
+
+}
+
+/* Styles for screens between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  /* CSS rules for medium screens */
+  /* Register */
+
+.register-container{
+  text-align: center;
+  display: flex;
+  margin-top: 8%;
+
+  justify-content: center;
+}
+
+.register-container form{
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
+   background-color: lightgray;
+   width: 27%;
+   padding: 2em;
+   border: 2px solid black;
+   box-shadow: 2px 10px gray;
+   border-radius: 1.5em;
+   position: absolute;
+   right: 40%;
+}
+
+.username label{
+  padding-right: 2em; 
+  font-weight: bold;
+}
+.password label{
+   padding-right: 2em; 
+   font-weight: bold;
+}
+.bio label{
+   padding-right: 3.5em; 
+   font-weight: bold;
+}
+.image label{
+   padding-right: 3.5em; 
+   font-weight: bold;
+}
+
+.username input{
+  border: 2.5px solid black;
+}
+.password input{
+   border: 2.5px solid black;
+ }
+ .bio textarea{
+   border: 2.5px solid black;
+ }
+ .image input{
+   border: 2.5px solid black;
+ }
+
+ .submit input[value="Create Account"]{
+   background-color: greenyellow;
+   color: black;
+   font-weight: bold;
+   border: 2px solid black;
+   border-radius: 2em;
+ }
+
+ .submit input[value="Create Account"]:hover{
+   font-size: larger;
+ }
+
+}
+
+/* Styles for screens larger than 900px */
+@media (min-width: 901px) {
+  /* CSS rules for large screens */
+  /* Register */
+
+.register-container{
+  text-align: center;
+  display: flex;
+  margin-top: 8%;
+
+  justify-content: center;
+}
+
+.register-container form{
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
+   background-color: lightgray;
+   width: 27%;
+   padding: 2em;
+   border: 2px solid black;
+   box-shadow: 2px 10px gray;
+   border-radius: 1.5em;
+   position: absolute;
+   right: 40%;
+}
+
+.username label{
+  padding-right: 2em; 
+  font-weight: bold;
+}
+.password label{
+   padding-right: 2em; 
+   font-weight: bold;
+}
+.bio label{
+   padding-right: 3.5em; 
+   font-weight: bold;
+}
+.image label{
+   padding-right: 3.5em; 
+   font-weight: bold;
+}
+
+.username input{
+  border: 2.5px solid black;
+}
+.password input{
+   border: 2.5px solid black;
+ }
+ .bio textarea{
+   border: 2.5px solid black;
+ }
+ .image input{
+   border: 2.5px solid black;
+ }
+
+ .submit input[value="Create Account"]{
+   background-color: greenyellow;
+   color: black;
+   font-weight: bold;
+   border: 2px solid black;
+   border-radius: 2em;
+ }
+
+ .submit input[value="Create Account"]:hover{
+   font-size: larger;
+ }
+
+}

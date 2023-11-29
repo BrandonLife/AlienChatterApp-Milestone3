@@ -4,7 +4,7 @@
 
 
  /* Styles for screens smaller than or equal to 600px */
-@media (max-width: 790px) {
+@media (max-width: 600px) {
   /* CSS rules for small screens */
   /* Nav component */
 .nav-container-unprotected{
@@ -21,18 +21,22 @@
   background-color: gray;
   border: 4px solid black;
  }
-
+.nav-link{
+  width: 100%;
+}
 .nav-link-container-unprotected{
 display: flex;
 flex-direction: row;
 gap: 2.5em;
 margin: 1em;
 }
+
 .nav-link-container-protected{
   display: flex;
   flex-direction:column;
   gap: 2.5em;
   margin: 1em;
+  width: 36%;
   }
 .nav-link a{
 background-color: lightgray;
@@ -41,6 +45,7 @@ border-radius: 6px;
 font-size: 1em;
 text-decoration: none;
 padding: 2px;
+width: 100%;
 color: green;
 }
 
@@ -93,6 +98,7 @@ color: green;
   background-color: lightgray;
   width: 100%;
   border: 4px solid black;
+  gap: 2em;
   }
   .footer-container a{
     text-decoration: none;
@@ -100,15 +106,15 @@ color: green;
   }
 
 .social-links-codewars{
-width: 33.3%;
+width: 12%;
 }
 
 .social-links-github{
-  width: 33.3%;
+  width: 15%;
 }
 
 .social-links-linkedin{
-  width: 33.3%;
+  width: 15%;
 }
 
 .social-links-github img{
@@ -166,8 +172,8 @@ background-color: chartreuse;
   }
 }
 /* /////////////////////////////////////////////////////////////////////// */
-/* Styles for screens between 601px and 900px */
-@media (min-width: 800px) and (max-width: 890px) {
+/* Styles for screens between 601px and 899px */
+@media (min-width: 601px) and (max-width: 899px) {
   /* CSS rules for medium screens */
   /* Nav component */
 .nav-container-protected{
@@ -309,8 +315,8 @@ font-size: .75em;
 }
 }
 
-/* Styles for screens extra large more than 1000px */
-@media (min-width: 900px){
+/* Styles for screens extra large more than 901px */
+@media (min-width: 901px){
   /* CSS rules for large screens */
   /* Nav component */
 .nav-container-protected{
@@ -335,8 +341,8 @@ margin: 1.5em;
   display: flex;
   margin: 1.5em;
   }
-  .login-unprotected .nav-link-right{
-   padding-left: 30em;
+.login-unprotected{
+ padding-left: 90em;
   }
 .nav-link a{
 background-color: lightgray;
@@ -355,10 +361,13 @@ color: green;
 
 .login-protected{
   display: flex;
-  gap: 1em;
+  gap: .75em;
   margin: .5em;
   text-align: right;
-  margin-top: 1.5em;
+  margin-top: .5em;
+}
+.login-protected input:hover{
+ font-size: .68em;
 }
 .login-unprotected{
   display: flex;

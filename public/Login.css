@@ -1,48 +1,161 @@
-/* Login */
+/* Styles for screens smaller than or equal to 600px */
+@media (max-width: 600px) {
+  /* CSS rules for small screens */
+  /* Login */
 .login-container{
-    text-align: center;
-    display: flex;
-    margin-top: 10%;
-    justify-content: center;
- }
- 
- .login-container form{
-     display: flex;
-     flex-direction: column;
-     gap: 2em;
-     background-color: lightgray;
-     width: 15%;
-     padding: 2em;
-     border: 2px solid black;
-     box-shadow: 2px 10px gray;
-     border-radius: 1.5em;
-     position: absolute;
-     right: 40%;
- }
- 
- .username label{
-    padding-right: 2em; 
-    font-weight: bold;
- }
- .password label{
-     padding-right: 2em; 
-     font-weight: bold;
-  }
+  text-align: center;
+  display: flex;
+  margin-top: 10%;
+  justify-content: center;
+}
 
-  .username input{
-    border: 2.5px solid black;
-  }
-  .password input{
-     border: 2.5px solid black;
-   }
-   .submit input[value="Sign In"]{
-    background-color: greenyellow;
-    color: black;
-    font-weight: bold;
-    border: 2px solid black;
-    border-radius: 2em;
-  }
+.login-container form{
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
+   background-color: lightgray;
+   width: 15%;
+   padding: 2em;
+   border: 2px solid black;
+   box-shadow: 2px 10px gray;
+   border-radius: 1.5em;
+   position: absolute;
+   right: 40%;
+}
 
-  .submit input[value="Sign In"]:hover{
-    font-size: larger;
-  }
+.username label{
+  padding-right: 2em; 
+  font-weight: bold;
+}
+.password label{
+   padding-right: 2em; 
+   font-weight: bold;
+}
+
+.username input{
+  border: 2.5px solid black;
+}
+.password input{
+   border: 2.5px solid black;
+ }
+ .submit input[value="Sign In"]{
+  background-color: greenyellow;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 2em;
+}
+
+.submit input[value="Sign In"]:hover{
+  font-size: larger;
+}
+
+}
+
+/* Styles for screens between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  /* CSS rules for medium screens */
+  /* Login */
+.login-container{
+  text-align: center;
+  display: flex;
+  margin-top: 10%;
+  justify-content: center;
+}
+
+.login-container form{
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
+   background-color: lightgray;
+   width: 15%;
+   padding: 2em;
+   border: 2px solid black;
+   box-shadow: 2px 10px gray;
+   border-radius: 1.5em;
+   position: absolute;
+   right: 40%;
+}
+
+.username label{
+  padding-right: 2em; 
+  font-weight: bold;
+}
+.password label{
+   padding-right: 2em; 
+   font-weight: bold;
+}
+
+.username input{
+  border: 2.5px solid black;
+}
+.password input{
+   border: 2.5px solid black;
+ }
+ .submit input[value="Sign In"]{
+  background-color: greenyellow;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 2em;
+}
+
+.submit input[value="Sign In"]:hover{
+  font-size: larger;
+}
+
+}
+
+/* Styles for screens larger than 900px */
+@media (min-width: 901px) {
+  /* CSS rules for large screens */
+  /* Login */
+.login-container{
+  text-align: center;
+  display: flex;
+  margin-top: 10%;
+  justify-content: center;
+}
+
+.login-container form{
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
+   background-color: lightgray;
+   width: 15%;
+   padding: 2em;
+   border: 2px solid black;
+   box-shadow: 2px 10px gray;
+   border-radius: 1.5em;
+   position: absolute;
+   right: 40%;
+}
+
+.username label{
+  padding-right: 2em; 
+  font-weight: bold;
+}
+.password label{
+   padding-right: 2em; 
+   font-weight: bold;
+}
+
+.username input{
+  border: 2.5px solid black;
+}
+.password input{
+   border: 2.5px solid black;
+ }
+ .submit input[value="Sign In"]{
+  background-color: greenyellow;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 2em;
+}
+
+.submit input[value="Sign In"]:hover{
+  font-size: larger;
+}
+
+}

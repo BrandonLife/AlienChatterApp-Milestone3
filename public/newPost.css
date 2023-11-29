@@ -1,16 +1,52 @@
-/* Add/Edit Post */
+
+/* Styles for screens smaller than or equal to 600px */
+@media (max-width: 600px) {
+  /* CSS rules for small screens */
+  /* Add/Edit Post */
 
 .add-post-form-container{
-    position: absolute;
-    left: 40%;
-    top: 20%;
-    background-color: lightgray;
-    padding: 3.5em;
-    border: 2px solid black;
-    border-radius: 2em;
-  }
+  background-color: lightgray;
+  padding: 3.5em;
+  border: 2px solid black;
+  border-radius: 2em;
+  font-weight: bold;
+  font-size: 1em;
+}
 
-  .add-post-form-container{
-    font-weight: bold;
-    font-size: 20px;
-  }
+}
+
+/* Styles for screens between 601px and 900px */
+@media (min-width: 601px) and (max-width: 900px) {
+  /* CSS rules for medium screens */
+  /* Add/Edit Post */
+
+.add-post-form-container{
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  background-color: lightgray;
+  padding: 3.5em;
+  border: 2px solid black;
+  border-radius: 2em;
+  font-weight: bold;
+  font-size: 20px;
+}
+}
+
+/* Styles for screens larger than 900px */
+@media (min-width: 901px) {
+  /* CSS rules for large screens */
+  /* Add/Edit Post */
+
+.add-post-form-container{
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  background-color: lightgray;
+  padding: 3.5em;
+  border: 2px solid black;
+  border-radius: 2em;
+  font-weight: bold;
+  font-size: 20px;
+}
+}
