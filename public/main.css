@@ -168,7 +168,6 @@ background-color: chartreuse;
   
   .logout-input:hover{
   background-color: black;
-  font-size: .75em;
   }
 }
 /* /////////////////////////////////////////////////////////////////////// */
@@ -311,7 +310,6 @@ font-weight: bold;
 
 .logout-input:hover{
 background-color: black;
-font-size: .75em;
 }
 }
 
@@ -365,9 +363,6 @@ color: green;
   margin: .5em;
   text-align: right;
   margin-top: .5em;
-}
-.login-protected input:hover{
- font-size: .68em;
 }
 .login-unprotected{
   display: flex;
@@ -479,6 +474,5 @@ font-weight: bold;
 
 .logout-input:hover{
 background-color: black;
-font-size: .75em;
 }
 }
