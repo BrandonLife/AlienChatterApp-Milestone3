@@ -7,24 +7,26 @@
   width: 100%;
   border: 2px solid black;
   border-radius: 2em;
+  margin-top: 30px;
 }
 
 .specific-post-title{
   display: block;
-  width: 100%;
+  width: 99%;;
 }
 .specific-post-title h1{
 text-align: center;
 background-color: greenyellow;
 width: 100%;
 border: 2px solid black;
+border-radius: .5em;
 
 }
 
 .specific-post-image img{
 display: inline;
-width: 60%;
-height: 350px;
+width: 98%;
+height: 248px;
 }
 
 
@@ -183,25 +185,30 @@ width: 30%;
 border: 2px solid black;
 margin-left: 12em;
 }
-
+.specific-post-image{
+  width: 100%;
+  height: 205px;
+}
 .specific-post-image img{
-width: 10%;
-padding-left: 10em;
+width: 40%;
+padding-left: 20em;
 }
 
-.specific-post-image img{
-  width: 12%;
-  padding-left: 10em;
+  .specific-post-dateMade{
+    text-align: center;
   }
-
 .specific-post-dateMade span{
     font-weight: bold;
     }
 
+.specific-post-subject{
+      text-align: center;
+}
 .specific-post-subject p{
   padding-left: .5em;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
+  font-size: 1.25em;
 }
 
 .specific-post-description p{

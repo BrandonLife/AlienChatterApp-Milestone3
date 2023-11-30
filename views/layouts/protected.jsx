@@ -51,7 +51,7 @@ function protectedDefault(html) {
                 {/* end of nav */}
                 <div className="default-container">{html.children }</div>
                 {/* Beginning of footer */}
-                <div className='footer-container'>
+        <div className='footer-container'>
           <div className='social-links-github'>
            <a href='https://github.com/BrandonLife'><img src='https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png' alt='github logo'></img><span>GitHub</span></a>   
           </div>

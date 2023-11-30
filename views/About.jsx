@@ -16,7 +16,7 @@ function About({user}) {
        </p>
        </div>
        <div className="video">
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/RsQCXN4o4Ps?si=gAnN5RE0_8wI-jSd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       <iframe src="https://www.youtube.com/embed/RsQCXN4o4Ps?si=gAnN5RE0_8wI-jSd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
        </div>
      </div>
      </Protected>

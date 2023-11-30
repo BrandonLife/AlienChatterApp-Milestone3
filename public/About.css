@@ -21,6 +21,10 @@
    color: green;
    margin: auto;
    }
+   .video iframe{
+    width: 350px;
+    height: 300px;
+   }
 }
 
 /* Styles for screens between 601px and 900px */
@@ -45,6 +49,10 @@
    color: green;
    margin: auto;
    }
+   .video iframe{
+    width: 500px;
+    height: 300px;
+   }
 }
 
 /* Styles for screens larger than 900px */
@@ -68,5 +76,9 @@
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    color: green;
    margin: auto;
+   }
+   .video iframe{
+    width: 560px;
+    height: 400px;
    }
 }
