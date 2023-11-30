@@ -2,7 +2,10 @@
 @media (max-width: 600px) {
   /* CSS rules for small screens */
   /* Contact page- this is from https://snippets.wrappixel.com/simple-contact-us-form/ */ 
-
+.contact-container{
+  height: 646px;
+  margin-bottom: 160px;
+}
 
 .contact-container form{
   display: flex;

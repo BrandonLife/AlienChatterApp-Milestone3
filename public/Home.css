@@ -2,8 +2,8 @@
     /* CSS rules for small screens */
      /* Home */
      .home-container{
-        display: flex;
-        flex-direction: column;
+        height: 834px;
+        margin-bottom: 171px;
      }
     
  .float-left{
@@ -15,6 +15,7 @@
     margin-top: .25em;
     background-color: rgb(170, 167, 167);
     box-shadow: 2px 5px gray;
+    margin-bottom: 15px;
    
 }
 .float-right{

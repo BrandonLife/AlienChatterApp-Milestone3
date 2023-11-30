@@ -15,14 +15,15 @@
   border: 4px solid black;
  }
  .nav-container-protected{
-  display: flex;
-  /* justify-content: left; */
+  display: block;
   flex-direction: row;
   background-color: gray;
   border: 4px solid black;
+  width: 100%;
  }
 .nav-link{
   width: 100%;
+  margin-top: 14px;
 }
 .nav-link-container-unprotected{
 display: flex;
@@ -32,21 +33,19 @@ margin: 1em;
 }
 
 .nav-link-container-protected{
-  display: flex;
-  flex-direction:column;
-  gap: 2.5em;
+  display: block;
   margin: 1em;
-  width: 36%;
+  width: 100%;
   }
 .nav-link a{
-background-color: lightgray;
-border: 2px solid black;
-border-radius: 6px;
-font-size: 1em;
-text-decoration: none;
-padding: 2px;
-width: 100%;
-color: green;
+  background-color: lightgray;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 2px;
+  color: green;
+  width: 25px;
 }
 
 .nav-link a:hover{
@@ -63,15 +62,18 @@ color: green;
   margin-top: 1.15em;
 }
 .login-protected{
-  display: flex;
+  display: block;
   gap: 1em;
-  margin: .5em;
-  text-align: right;
-  padding-left: 39%;
+  margin: 0.5em;
+  width: 217px;
   
 }
 .nav-link-right{
   font-size: 1em;
+}
+.nav-link-right span{
+  font-size: 18px;
+  font-weight: bold;
 }
 .nav-link-right a{
   color: black;
@@ -162,9 +164,10 @@ background-color: chartreuse;
 .logout-input{
   background-color: whitesmoke;
   color: green;
-  font-size: 1em;
+  font-size: 20px;
   border-radius: 3em;
   font-weight: bold;
+  margin-left: 12px;
   }
   
   .logout-input:hover{
