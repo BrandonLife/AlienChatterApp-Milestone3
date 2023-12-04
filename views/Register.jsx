@@ -9,15 +9,15 @@ return (
         <h1>Register</h1>
         <div className='username'>
         <label htmlFor='username'>Username</label>
-        <input id='username' name='username' type='text' required></input>
+        <input id='username' name='username' type='text' placeholder="Ex: JOHN" required></input>
         </div>
         <div className='password'>
         <label htmlFor='password'>Password</label>
-        <input id='password' name='password' type='text' required></input>
+        <input id='password' name='password' type='text' placeholder="Ex: 1234 " required></input>
         </div>
         <div className='bio'>
         <label htmlFor='bio'>Bio</label>
-        <textarea id='bio' name='bio' type='text' required></textarea>
+        <textarea id='bio' name='bio' type='text' placeholder="Ex: For he served with dignity and duty" required></textarea>
         </div>
         <div className='image'>
         <label htmlFor='image'>Image</label>

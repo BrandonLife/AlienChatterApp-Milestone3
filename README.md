@@ -32,7 +32,7 @@
 <h2>Challenges</h2>
 <p>There were many challenges that I faced during this project. Here is a list of challenges:</p>
 <ol>
-<li>The first challenge was when i was using create-react-app to try and render pages realizing that i could not render pages using res.render</li>
+<li>The first challenge was using create-react-app to try and render pages realizing that I could not render pages using res.render</li>
 <li>From the point above, this prompted me to use JSX(without React) and use the npm package express-react-views</li>
 <li>Using JSX(without React) I realized I did not have access to state such as usestate or useEffect. So I had to work around that.</li>
 <li>Due to me using the create-react-app at first, I had to restructure my entire entire project directories so that I could work with express-react-views</li>
