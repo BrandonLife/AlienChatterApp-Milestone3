@@ -9,7 +9,7 @@ function Login() {
           <h1>Login</h1>
         <div className='username'>
           <label htmlFor='username'>Username</label>
-          <input id='username' name='username' type='text' placeholder="Enter Username" required></input>
+          <input id='username' name='username' type='text' autoFocus placeholder="Enter Username" required></input>
           </div>
           <div className='password'>
           <label htmlFor='password'>Password</label>

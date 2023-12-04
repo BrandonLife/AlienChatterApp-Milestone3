@@ -1,7 +1,6 @@
 const React = require("react");
 function Default(html) {
-    
-    return (
+ return (
     <html lang="en">
         <head>
             <meta charSet="UTF-8" />

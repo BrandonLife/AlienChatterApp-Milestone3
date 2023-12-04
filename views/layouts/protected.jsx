@@ -1,6 +1,6 @@
 const React = require("react");
 function protectedDefault(html) {
-    console.log(html, "can i get user")
+    // console.log(html, "can i get user")
     
     return (
     <html lang="en">

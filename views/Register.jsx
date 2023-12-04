@@ -9,7 +9,7 @@ return (
         <h1>Register</h1>
         <div className='username'>
         <label htmlFor='username'>Username</label>
-        <input id='username' name='username' type='text' placeholder="Ex: JOHN" required></input>
+        <input id='username' name='username' type='text' autoFocus placeholder="Ex: JOHN" required></input>
         </div>
         <div className='password'>
         <label htmlFor='password'>Password</label>
@@ -21,7 +21,7 @@ return (
         </div>
         <div className='image'>
         <label htmlFor='image'>Image</label>
-        <input id='image' name='image' type='text' required></input>
+        <input id='image' name='image' type='text' placeholder="Ex: picture.jpg" required></input>
         </div>
         <div className='submit'>
         <input type='submit' value={"Create Account"}></input>

@@ -19,15 +19,15 @@ function Contact({user}) {
                  <h1>Make Contact</h1>
                  <div className="contact-name-container">
                  <label htmlFor="name">Name</label>
-                 <input id="name" name="name" type="text"></input>
+                 <input id="name" name="name" placeholder="Enter Name" type="text"></input>
                  </div>
                  <div className="contact-email-container">
                  <label htmlFor="email">Email</label>
-                 <input id="email" name="email" type="text"></input> 
+                 <input id="email" name="email" placeholder="Enter Email" type="text"></input> 
                  </div>
                  <div className="contact-message-container">
                  <label htmlFor="message">Message</label>
-                 <textarea id="message" name="message" type="text"></textarea> 
+                 <textarea id="message" name="message" maxLength={120} placeholder="Max length 120 characters" type="text"></textarea> 
                  </div>
              </form>
              </div>
