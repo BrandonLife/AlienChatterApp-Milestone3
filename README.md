@@ -1,4 +1,4 @@
-<h1>Alien Chatter<img src = "https://www.boardinfinity.com/blog/content/images/2023/01/Mern.png" width= "100px"></img></h1>
+<h1>Alien Chatter<img src = "https://c02.purpledshub.com/uploads/sites/41/2023/05/AlienGetty-27be7a5-e1683039906476.jpg" padding-left="10px" width= "110px"></img></h1>
 
 <h1>Technologies Used</h1>
 <ul>
