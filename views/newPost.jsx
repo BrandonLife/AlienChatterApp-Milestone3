@@ -12,10 +12,10 @@ let time = new Date()
 let currentTime = time.getHours() + ':' + time.getMinutes() + ":" + time.getSeconds()
 
 today= `${currentTime} on ${month}/${day}/${fullYear} `
-function newPost({ user, userId }) {
-  
+function newPost({ user }) {
   return (
     <div>
+       {/* Ternary operator approach for rendering views comes from ChatGPT */}
       {user ? (
         <Protected user= {user}>
         <div className="add-post-form-container">

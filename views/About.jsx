@@ -5,6 +5,7 @@ const Protected = require('./layouts/protected')
 function About({user}) {
   return (
     <div>
+      {/* Ternary operator approach for rendering views comes from ChatGPT */}
       {user ? (
   <Protected user= {user}>
   <div className='about-container'>

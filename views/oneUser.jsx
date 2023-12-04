@@ -28,7 +28,7 @@ function oneUser({ user, oneUser, userId }) {
   })  
     return (
         <div>
-  
+   {/* Ternary operator approach for rendering views comes from ChatGPT */}
             {user ? (
                  <Protected oneUser={oneUser} userId={userId}>
                   {postsDisplay}

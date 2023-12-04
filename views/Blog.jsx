@@ -16,6 +16,7 @@ function Blog({ posts, user}) {
     }) 
     return (
         <div>
+                {/* Ternary operator approach for rendering views comes from ChatGPT */}
             {user ? (
              <Protected user= {user}>
              <div className="post-header-container">

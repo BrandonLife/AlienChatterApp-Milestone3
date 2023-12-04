@@ -189,7 +189,7 @@
 
 </table>
 
-<h1>Sources for help</h1>
+<h1>Sources & Questions for help</h1>
 <ul>
 <h2>General Questions such as how do I clear a cookie using jwt?</h2>
 <li>Google</li>
@@ -205,15 +205,17 @@
 <li>From ChatGPT, If you want to find a user's ID based on their username in Express.js using req.params, you can achieve this by querying your MongoDB database with Mongoose</li>
 <h2>How can I implment Protected Routes using express-react-views</h2>
 <li>From ChatGPT, In an Express application using express-react-views, you can implement protected routes by checking the user's authentication status before rendering the views </li>
-<h2>Image sources on Home page</h2>
-<li>Alien in cornfield pic-https://images.nightcafe.studio/jobs/qVEluUdr4aSFYNcrNgF6/qVEluUdr4aSFYNcrNgF6--1--c4bo3.jpg?tr=w-1600,c-at_max</li>
-<li>Join the fight pic-https://static1.squarespace.com/static/576454e629687fb39bd1f977/t/5f319bf3115f6d75cb9e0178/1597086714579/thefight.png?format=1500w</li>
 <h2>Using cors middleware how can i allow a connection from localhost:1000</h2>
-<li>From CHATGPT, To allow connections from localhost:3000 using the cors middleware in Express, you can configure the middleware with specific options to specify the allowed origin. EX: app.use(cors({
+<li>From CHATGPT, To allow connections from localhost:1000 using the cors middleware in Express, you can configure the middleware with specific options to specify the allowed origin. EX: app.use(cors({
   origin: 'http://localhost:1000', // Allow requests from this origin
   credentials: true, // Enable credentials (cookies, authorization headers, etc.)
 })); </li>
 </ul>
-
+<h2>What does Next() do?</h2>
+<li>From Google search, the next() function is a function in the Express router that, when invoked, executes the next middleware in the middleware stack. If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function </li>
+<li>NEXT-https://reflectoring.io/express-middleware/#:~:text=The%20next()%20function%20is,to%20the%20next%20middleware%20function.</li>
+<h2>Image sources on Home page</h2>
+<li>Alien in cornfield pic-https://images.nightcafe.studio/jobs/qVEluUdr4aSFYNcrNgF6/qVEluUdr4aSFYNcrNgF6--1--c4bo3.jpg?tr=w-1600,c-at_max</li>
+<li>Join the fight pic-https://static1.squarespace.com/static/576454e629687fb39bd1f977/t/5f319bf3115f6d75cb9e0178/1597086714579/thefight.png?format=1500w</li>
 <h1>Link to deployed site</h1>
 <p>https://alienchatter.onrender.com/posts/home</p>

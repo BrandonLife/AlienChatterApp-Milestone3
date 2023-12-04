@@ -2,10 +2,9 @@ const React = require("react");
 const Default = require('./layouts/default')
 const Protected = require('./layouts/protected')
 function specificPost({ post, user }) {
-    console.log(post)
     return (
         <div>
-        
+            {/* Ternary operator approach for rendering views comes from ChatGPT */}
             {user ? (
             <Protected user= {user}>
             <div className="specific-post-container">
