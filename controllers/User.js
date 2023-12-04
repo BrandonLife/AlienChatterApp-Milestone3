@@ -38,7 +38,7 @@ router.get('/userlogin', (req, res) => {
 
 
 // Get a specific user 
-
+//Still in progress
 router.get('/:id', verifyUser,  async (req, res) => {
     const { id } = req.params
     const user = await User.findById(id).populate('posts')
@@ -110,6 +110,7 @@ router.post('/login', async (req, res) => {
 
 
 //Edit User
+//STill in progress
 router.put('/:id', verifyUser, async (req, res) => {
     const { id } = req.params
     let user = await User.findById(id)
@@ -117,6 +118,7 @@ router.put('/:id', verifyUser, async (req, res) => {
 })
 
 //Delete User
+//Still in progress
 router.delete('/:id', verifyUser, async (req, res) => {
     const { id } = req.params
     await User.findByIdAndDelete(id)

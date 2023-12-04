@@ -56,6 +56,153 @@
 <li>Now you have the project downloaded onto your local machine</li>
 <li>Cd into the directory labeled AlienChatterApp</li>
 <li>Once in the AlienChatterApp, npm install to install necessary node modules</li>
-<li>Now that everything is install, from the root directory which is AlienChatterApp(it should say (main) on the side if you are using gitbash) type npm run dev</li>
+<li>Now that everything is installed, from the root directory which is AlienChatterApp(it should say (main) on the side if you are using gitbash) type npm run dev</li>
 <li>The application is now running. Go to your browser and type in localhost:8080/posts/home and that's it</li>
 </ol>
+
+<h1>Post Routes</h1>
+<h2>These routes use /posts as their base url</h2>
+<table>
+<tr>
+<th>Route</th>
+<th>Method</th>
+<th>Route URL</th>
+<th>Full URL</th>
+</tr>
+
+<tr>
+<td>Home</td>
+<td>GET</td>
+<td>/home</td>
+<td>/posts/home</td>
+</tr>
+
+<tr>
+<td>About</td>
+<td>GET</td>
+<td>/about</td>
+<td>/posts/about</td>
+</tr>
+
+<tr>
+<td>Contact</td>
+<td>GET</td>
+<td>/contact</td>
+<td>/posts/contact</td>
+</tr>
+
+<tr>
+<td>Blog</td>
+<td>GET</td>
+<td>/blog/:username</td>
+<td>/posts/blog/:username</td>
+</tr>
+
+<tr>
+<td>Specific Post Page</td>
+<td>GET</td>
+<td>/:id</td>
+<td>/posts/:id</td>
+</tr>
+
+<tr>
+<td>New Post Page</td>
+<td>GET</td>
+<td>/new/:username</td>
+<td>/posts/new/:username</td>
+</tr>
+
+<tr>
+<td>Edit Post Page</td>
+<td>GET</td>
+<td>/:id/edit</td>
+<td>/posts/:id/edit</td>
+</tr>
+
+<tr>
+<td>Create Post</td>
+<td>Post</td>
+<td>/:username</td>
+<td>/posts/:username</td>
+</tr>
+
+<tr>
+<td>Update Post</td>
+<td>PUT</td>
+<td>/:id</td>
+<td>/posts/:id</td>
+</tr>
+
+<tr>
+<td>Delete Post</td>
+<td>Delete</td>
+<td>/:id</td>
+<td>/posts/:id</td>
+</tr>
+
+</table>
+
+<h1>User Routes</h1>
+<h2>These routes use /users as their base url</h2>
+<table>
+<tr>
+<th>Route</th>
+<th>Method</th>
+<th>Route url</th>
+<th>Full url</th>
+</tr>
+
+<tr>
+<td>Registration Page</td>
+<td>GET</td>
+<td>/registration</td>
+<td>/users/registration</td>
+</tr>
+
+<tr>
+<td>Login Page</td>
+<td>GET</td>
+<td>/userlogin</td>
+<td>/users/userlogin</td>
+</tr>
+
+<tr>
+<td>Logout</td>
+<td>POST</td>
+<td>/logout</td>
+<td>/users/logout</td>
+</tr>
+
+<tr>
+<td>Regiser new user</td>
+<td>POST</td>
+<td>/register</td>
+<td>/users/register</td>
+</tr>
+
+<tr>
+<td>Login User</td>
+<td>POST</td>
+<td>/login</td>
+<td>/users/login</td>
+</tr>
+
+</table>
+
+<h1>Sources for help</h1>
+<ul>
+<h2>General Questions such as how do I clear a cookie using jwt?</h2>
+<li>ChatGPT</li>
+<h2>Why is localstorage not defined</h2>
+<li>https://stackoverflow.com/questions/52474208/react-localstorage-is-not-defined-error-showing</li>
+<h2>How do I create a login post route using NodeJs and MongoDB? And how do I create a new user?</h2>
+<li>https://blog.bitsrc.io/how-to-use-jwt-for-authentication-and-create-a-login-system-in-node-js-and-mongodb-83bb852e777a</li>
+<h2>How do I verify the user?</h2>
+<li> https://www.youtube.com/watch?v=yHdkG33l7tQ</li>
+<h2>How do I create a verify user middleware?</h2>
+<li>https://www.loginradius.com/blog/engineering/nodejs-and-mongodb-application-authentication-by-jwt/</li>
+
+<h2>Image sources on Home page</h2>
+<li>Alien in cornfield pic-https://images.nightcafe.studio/jobs/qVEluUdr4aSFYNcrNgF6/qVEluUdr4aSFYNcrNgF6--1--c4bo3.jpg?tr=w-1600,c-at_max</li>
+<li>Join the fight pic-https://static1.squarespace.com/static/576454e629687fb39bd1f977/t/5f319bf3115f6d75cb9e0178/1597086714579/thefight.png?format=1500w</li>
+</ul>
