@@ -121,7 +121,7 @@
 
 <tr>
 <td>Create Post</td>
-<td>Post</td>
+<td>POST</td>
 <td>/:username</td>
 <td>/posts/:username</td>
 </tr>
@@ -135,7 +135,7 @@
 
 <tr>
 <td>Delete Post</td>
-<td>Delete</td>
+<td>DELETE</td>
 <td>/:id</td>
 <td>/posts/:id</td>
 </tr>
@@ -192,7 +192,7 @@
 <h1>Sources for help</h1>
 <ul>
 <h2>General Questions such as how do I clear a cookie using jwt?</h2>
-<li>ChatGPT</li>
+<li>Google</li>
 <h2>Why is localstorage not defined</h2>
 <li>https://stackoverflow.com/questions/52474208/react-localstorage-is-not-defined-error-showing</li>
 <h2>How do I create a login post route using NodeJs and MongoDB? And how do I create a new user?</h2>
@@ -201,8 +201,16 @@
 <li> https://www.youtube.com/watch?v=yHdkG33l7tQ</li>
 <h2>How do I create a verify user middleware?</h2>
 <li>https://www.loginradius.com/blog/engineering/nodejs-and-mongodb-application-authentication-by-jwt/</li>
-
+<h2>How can i find the id from a req using the username in the req.params</h2>
+<li>From ChatGPT, If you want to find a user's ID based on their username in Express.js using req.params, you can achieve this by querying your MongoDB database with Mongoose</li>
+<h2>How can I implment Protected Routes using express-react-views</h2>
+<li>From ChatGPT, In an Express application using express-react-views, you can implement protected routes by checking the user's authentication status before rendering the views </li>
 <h2>Image sources on Home page</h2>
 <li>Alien in cornfield pic-https://images.nightcafe.studio/jobs/qVEluUdr4aSFYNcrNgF6/qVEluUdr4aSFYNcrNgF6--1--c4bo3.jpg?tr=w-1600,c-at_max</li>
 <li>Join the fight pic-https://static1.squarespace.com/static/576454e629687fb39bd1f977/t/5f319bf3115f6d75cb9e0178/1597086714579/thefight.png?format=1500w</li>
+<h2>Using cors middleware how can i allow a connection from localhost:1000</h2>
+<li>From CHATGPT, To allow connections from localhost:3000 using the cors middleware in Express, you can configure the middleware with specific options to specify the allowed origin. EX: app.use(cors({
+  origin: 'http://localhost:1000', // Allow requests from this origin
+  credentials: true, // Enable credentials (cookies, authorization headers, etc.)
+})); </li>
 </ul>
