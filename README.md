@@ -1,4 +1,4 @@
-<h1>Alien Chatter</h1>
+<h1>Alien Chatter</h1><img src = "https://www.boardinfinity.com/blog/content/images/2023/01/Mern.png"></img>
 
 <h1>Technologies Used</h1>
 <ul>
