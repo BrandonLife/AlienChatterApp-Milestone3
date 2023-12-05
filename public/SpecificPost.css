@@ -7,7 +7,8 @@
   width: 100%;
   border: 2px solid black;
   border-radius: 2em;
-  margin-top: 11px;
+  margin-top: 9px;
+  margin-bottom: 7em;
 }
 
 .specific-post-title{
@@ -27,7 +28,7 @@ border-radius: .5em;
   display: inline;
   width: 28%;
   padding-left: 29%;
-  height: 25px;
+  height: 78px;
 }
 
 
@@ -55,7 +56,7 @@ border-radius: .5em;
 .specific-post-button-container{
   display: flex;
   flex-direction: row;
-  margin: 1em;
+  margin-bottom: 4em;
   gap: 1.5em
 }
 
