@@ -23,7 +23,7 @@ function newPost({ user }) {
             <h1>Add Post</h1>
           <div className='form-group newInput'>
           < label htmlFor= 'title'>Title</label><br></br>
-          <input type='text' id='title' name='title' placeholder="Ex: They are here" />
+          <input type='text' id='title' name='title' />
           </div>
           <div className='form-group newInput'>
           < label htmlFor= 'author'>Author</label><br></br>
@@ -35,11 +35,11 @@ function newPost({ user }) {
           </div>
           <div className='form-group newInput'>
           < label htmlFor= 'description'>Description</label><br></br>
-          <textarea type='text' id='description' placeholder="Ex: We fight for another day" name='description' />
+          <textarea type='text' id='description' name='description' />
           </div>
           <div className='form-group newInput'>
           < label htmlFor= 'subject'>Subject</label><br></br>
-          <input type='text' id='subject' placeholder="Ex: Aliens" name='subject' />
+          <input type='text' id='subject' name='subject' />
           </div>
           <div className='form-group newInput'>
           < label htmlFor= 'dateMade'>DateMade</label><br></br>

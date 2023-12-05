@@ -27,7 +27,7 @@ function Contact({user}) {
                  </div>
                  <div className="contact-message-container">
                  <label htmlFor="message">Message</label>
-                 <textarea id="message" name="message" maxLength={120} placeholder="Max length 120 characters" type="text"></textarea> 
+                 <textarea id="message" name="message" type="text"></textarea> 
                  </div>
              </form>
              </div>
